@@ -1,0 +1,28 @@
+Full instruction can be found in : https://www.tensorflow.org/install/install_sources
+
+# 1 clone tensorflow from github
+$ git clone https://github.com/tensorflow/tensorflow
+
+$ cd tensorflow
+$ git checkout {{Branch}} # where Branch is the desired branch, maybe "master"
+
+# 2 install bazel: https://bazel.build/versions/master/docs/install.html
+# better to update bazel, lower version does not work
+
+# 3 mac install these
+$ sudo pip install six numpy wheel
+
+# 3 linux install these
+$ sudo apt-get install python3-numpy python3-dev python3-pip python3-wheel
+
+# 4 direct to tensorflow and configure files
+$ cd tensorflow  # cd to the top-level directory created
+# found out where is your python program for configure
+$ ./configure
+
+# 5 build wheel
+$ bazel build -c opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-mfpmath=both --copt=-msse4.2 //tensorflow/tools/pip_package:build_pip_package
+$ bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
+
+# 6 install pip
+$ sudo pip3 install /tmp/tensorflow_pkg/tensorflow-{{your version}}.whl
