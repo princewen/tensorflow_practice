@@ -64,8 +64,8 @@ target_int_to_letter,target_letter_to_int = extract_character_vocab(source_data+
 source_int = [[source_letter_to_int.get(letter,source_letter_to_int['<UNK>'])
                for letter in line] for line in source_data.split('\n')]
 
-target_int = [[target_letter_to_int.get(letter,target_letter_to_int['<UNK>'])
-               for letter in line] for line in target_data.split('\n')]
+target_int = [[target_letter_to_int.get(letter, target_letter_to_int['<UNK>'])
+               for letter in line] + [target_letter_to_int['<EOS>']] for line in target_data.split('\n')]
 
 print(source_int)
 print(target_int)
@@ -264,6 +264,13 @@ with train_graph.as_default():
                                 #  [True, True, False, False, False]]
     masks = tf.sequence_mask(target_sequence_length,max_target_sequence_length,dtype=tf.float32,name="masks")
 
+    # logits: A Tensor of shape [batch_size, sequence_length, num_decoder_symbols] and dtype float.
+    # The logits correspond to the prediction across all classes at each timestep.
+    #targets: A Tensor of shape [batch_size, sequence_length] and dtype int.
+    # The target represents the true class at each timestep.
+    #weights: A Tensor of shape [batch_size, sequence_length] and dtype float.
+    # weights constitutes the weighting of each prediction in the sequence. When using weights as masking,
+    # set all valid timesteps to 1 and all padded timesteps to 0, e.g. a mask returned by tf.sequence_mask.
     with tf.name_scope("optimization"):
         cost = tf.contrib.seq2seq.sequence_loss(
             training_logits,
@@ -338,7 +345,7 @@ checkpoint = "data/trained_model.ckpt"
 
 with tf.Session(graph=train_graph) as sess:
     sess.run(tf.global_variables_initializer())
-
+    print()
     for epoch_i in range(1,epochs+1):
         for batch_i,(targets_batch, sources_batch, targets_lengths, sources_lengths) in enumerate(get_batches(
             train_target,train_source,batch_size,source_letter_to_int['<PAD>'],

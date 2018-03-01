@@ -62,12 +62,12 @@ class Seq2SeqModel():
         # =================================3, 定义模型的decoder部分
         with tf.variable_scope('decoder'):
             encoder_inputs_length = self.encoder_inputs_length
-            if self.beam_search:
-                # 如果使用beam_search，则需要将encoder的输出进行tile_batch，其实就是复制beam_size份。
-                print("use beamsearch decoding..")
-                encoder_outputs = tf.contrib.seq2seq.tile_batch(encoder_outputs, multiplier=self.beam_size)
-                encoder_state = nest.map_structure(lambda s: tf.contrib.seq2seq.tile_batch(s, self.beam_size), encoder_state)
-                encoder_inputs_length = tf.contrib.seq2seq.tile_batch(self.encoder_inputs_length, multiplier=self.beam_size)
+            # if self.beam_search:
+            #     # 如果使用beam_search，则需要将encoder的输出进行tile_batch，其实就是复制beam_size份。
+            #     print("use beamsearch decoding..")
+            #     encoder_outputs = tf.contrib.seq2seq.tile_batch(encoder_outputs, multiplier=self.beam_size)
+            #     encoder_state = nest.map_structure(lambda s: tf.contrib.seq2seq.tile_batch(s, self.beam_size), encoder_state)
+            #     encoder_inputs_length = tf.contrib.seq2seq.tile_batch(self.encoder_inputs_length, multiplier=self.beam_size)
 
 
             attention_mechanism = tf.contrib.seq2seq.BahdanauAttention(num_units=self.rnn_size, memory=encoder_outputs,
@@ -78,7 +78,8 @@ class Seq2SeqModel():
             decoder_cell = tf.contrib.seq2seq.AttentionWrapper(cell=decoder_cell, attention_mechanism=attention_mechanism,
                                                                attention_layer_size=self.rnn_size, name='Attention_Wrapper')
             #如果使用beam_seach则batch_size = self.batch_size * self.beam_size。因为之前已经复制过一次
-            batch_size = self.batch_size if not self.beam_search else self.batch_size * self.beam_size
+            #batch_size = self.batch_size if not self.beam_search else self.batch_size * self.beam_size
+            batch_size = self.batch_size
             #定义decoder阶段的初始化状态，直接使用encoder阶段的最后一个隐层状态进行赋值
             decoder_initial_state = decoder_cell.zero_state(batch_size=batch_size, dtype=tf.float32).clone(cell_state=encoder_state)
             output_layer = tf.layers.Dense(self.vocab_size, kernel_initializer=tf.truncated_normal_initializer(mean=0.0, stddev=0.1))

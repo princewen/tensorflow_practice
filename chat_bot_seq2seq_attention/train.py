@@ -32,7 +32,7 @@ with tf.Session() as sess:
                          word2id,
                          mode='train',
                          use_attention=True,
-                         beam_search=False,
+                         beam_search=True,
                          beam_size=5,
                          max_gradient_norm=5.0
                          )
