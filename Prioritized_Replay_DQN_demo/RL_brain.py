@@ -7,10 +7,9 @@ tf.set_random_seed(1)
 
 class SumTree(object):
 
-    data_pointer = 0
-
     def __init__(self,capacity):
         self.capacity = capacity
+        self.data_pointer = 0
         self.tree = np.zeros(2 * capacity - 1)
         self.data = np.zeros(capacity,dtype=object)
 
@@ -58,14 +57,14 @@ class SumTree(object):
 
 class Memory(object):
 
-    epsilon = 0.01  # small amount to avoid zero priority
-    alpha = 0.6  # [0~1] convert the importance of TD error to priority
-    beta = 0.4  # importance-sampling, from initial value increasing to 1
-    beta_increment_per_sampling = 0.001
-    abs_err_upper = 1.  # clipped abs error
 
     def __init__(self, capacity):
         self.tree = SumTree(capacity)
+        self.epsilon = 0.01  # small amount to avoid zero priority
+        self.alpha = 0.6  # [0~1] convert the importance of TD error to priority
+        self.beta = 0.4  # importance-sampling, from initial value increasing to 1
+        self.beta_increment_per_sampling = 0.001
+        self.abs_err_upper = 1.  # clipped abs error
 
     def store(self, transition):
         max_p = np.max(self.tree.tree[-self.tree.capacity:])
