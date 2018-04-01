@@ -57,7 +57,7 @@ class DuelingDQN:
         else:
             self.sess = sess
         if output_graph:
-            tf.summary.FileWriter("logs/", self.sess.graph)
+            tf.summary.FileWriter("logs/",  self.sess.graph)
         self.cost_his = []
 
 
