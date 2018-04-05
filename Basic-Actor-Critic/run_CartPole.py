@@ -43,7 +43,6 @@ for i_episode in range(MAX_EPISODE):
         if RENDER: env.render()
 
         a = actor.choose_action(s)
-
         s_,r,done,info = env.step(a)
 
         if done: r = -20
