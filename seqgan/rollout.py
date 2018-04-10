@@ -48,8 +48,6 @@ class rollout():
                         else:
                             output,state = lstm1(lstm1_in,state,scope=tf.get_variable_scope())
 
-
-
                 for j in range(step,self.sequence_length):
                     if j==step:
                         lstm1_in = tf.nn.embedding_lookup(word_emb_W,self.pred_seq[:,j-1])

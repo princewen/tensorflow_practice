@@ -36,7 +36,7 @@ class training_config(object):
         self.dis_update_epoch_adv = 3  # update epoch / times of discriminator
         self.dis_update_time_pre = 50  # pretraining times of discriminator
         self.dis_update_epoch_pre = 3  # number of epoch / time in pretraining
-        self.pretrained_epoch_num = 120  # Number of pretraining epoch
+        self.pretrained_epoch_num = 20  # Number of pretraining epoch
         self.rollout_num = 16  # Rollout number for reward estimation
         self.test_per_epoch = 5  # Test the NLL per epoch
         self.batch_size = 64  # Batch size used for training

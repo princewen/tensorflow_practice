@@ -132,7 +132,7 @@ class Generator(object):
             self.softmax_list_reshape = tf.transpose(self.softmax_list,perm=[1,0,2]) # batch * seqs * emb_size
 
 
-            self.gen_loss_adv = - tf.reduce_sum(
+            self.pgen_loss_adv = - tf.reduce_sum(
                 tf.reduce_sum(
                     tf.one_hot(tf.to_int32(tf.reshape(self.input_seqs_adv,[-1])),self.num_emb,on_value=1.0,off_value=0.0)
                     * tf.log(tf.clip_by_value(tf.reshape(self.softmax_list_reshape,[-1,self.num_emb]),1e-20,1.0)),1
@@ -178,7 +178,6 @@ class Generator(object):
                     self.sample_word_list.append(sample_word)
 
             self.sample_word_list_reshpae = tf.transpose(tf.squeeze(tf.stack(self.sample_word_list)),perm=[1,0])
-
 
 
     def build(self):

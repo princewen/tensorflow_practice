@@ -12,8 +12,6 @@ def generate_samples(sess,trainable_model,batch_size,generated_num,output_file):
             fout.write(buffer)
 
 
-
-
 def target_loss(sess,target_lstm,data_loader):
     nll = []
     data_loader.reset_pointer()

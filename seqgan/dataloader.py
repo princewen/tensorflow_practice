@@ -76,7 +76,7 @@ class Dis_dataloader():
         self.labels = self.labels[:self.batch_size * self.num_batch]
 
         self.sentences_batches = np.split(self.sentences,self.num_batch,0)
-        self.labels_batches = np.split(self.sentences,self.num_batch,0)
+        self.labels_batches = np.split(self.labels,self.num_batch,0)
 
         self.pointer = 0
 

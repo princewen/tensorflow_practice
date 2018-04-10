@@ -46,8 +46,6 @@ def highway(input_,size,num_layers=1,bias = -2.0,f = tf.nn.relu,scope='Highway')
 
     return output
 
-
-
 class Discriminator(object):
     """
     A CNN for text classification.
@@ -69,7 +67,6 @@ class Discriminator(object):
         self.dropout_keep_prob = tf.placeholder(tf.float32,name='dropout_keep_prob')
         # Keeping track of l2 regularization loss (optional)
         self.l2_loss = tf.constant(0.0)
-
 
     def build_discriminator(self):
         with tf.variable_scope('discriminator'):
