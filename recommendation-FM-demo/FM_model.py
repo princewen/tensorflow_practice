@@ -18,8 +18,6 @@ def vectorize_dic(dic,ix=None,p=None,n=0,g=0):
     if ix==None:
         ix = dict()
 
-
-
     nz = n * g
 
     col_ix = np.empty(nz,dtype = int)
@@ -70,6 +68,7 @@ x_test,ix = vectorize_dic({'users':test['user'].values,
                            'items':test['item'].values},ix,x_train.shape[1],n=len(test.index),g=2)
 
 
+print(x_train)
 y_train = train['rating'].values
 y_test = test['rating'].values
 
