@@ -44,7 +44,6 @@ def inference(input_x,input_x_field,zeroWeights,oneDimWeights,thirdWeight):
 
     firstTwoValue = tf.add(zeroWeights, secondValue, name="firstTwoValue")
 
-
     thirdValue = tf.Variable(0.0,dtype=tf.float32)
     input_shape = input_x_size
 
@@ -94,7 +93,6 @@ if __name__ == '__main__':
     input_y = tf.placeholder(tf.float32)
     #
 
-
     lambda_w = tf.constant(0.001, name='lambda_w')
     lambda_v = tf.constant(0.001, name='lambda_v')
 
@@ -126,7 +124,6 @@ if __name__ == '__main__':
             for t in range(all_data_size):
                 input_x_batch = trainx[t]
                 input_y_batch = trainy[t]
-                print(input_x_batch,input_y_batch)
                 predict_loss,_, steps = sess.run([loss,train_step, global_step],
                                                feed_dict={input_x: input_x_batch, input_y: input_y_batch})
 
