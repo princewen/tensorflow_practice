@@ -2,11 +2,11 @@ Tensroflow的一些练习，基于tf1.4
 ======
 目录
 
-1、基础
-    基本语法
-    tensorBoard使用
-    dropout
-    基本神经网络
+1、基础\<br> 
+    基本语法\<br> 
+    tensorBoard使用\<br> 
+    dropout\<br> 
+    基本神经网络\<br> 
     卷积神经网络
 
 2、自然语言相关
