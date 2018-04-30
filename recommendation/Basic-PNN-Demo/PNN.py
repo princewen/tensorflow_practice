@@ -98,14 +98,11 @@ class PNN(BaseEstimator, TransformerMixin):
 
             self.lp = tf.concat(quadratic_output,axis=1) # N * init_deep_size
 
-
-
+            self.y_deep = tf.nn.relu(tf.add(tf.add(self.lz, self.lp), self.weights['product-bias']))
+            self.y_deep = tf.nn.dropout(self.y_deep, self.dropout_keep_deep[0])
 
 
             # Deep component
-            self.y_deep = tf.nn.relu(tf.add(tf.add(self.lz,self.lp),self.weights['product-bias']))
-            self.y_deep = tf.nn.dropout(self.y_deep,self.dropout_keep_deep[0])
-
             for i in range(0,len(self.deep_layers)):
                 self.y_deep = tf.add(tf.matmul(self.y_deep,self.weights["layer_%d" %i]), self.weights["bias_%d"%i])
                 self.y_deep = self.deep_layers_activation(self.y_deep)
