@@ -6,7 +6,7 @@ Tensroflow练习
 目录
 
 1、基础<br> 
-    基本语法<br> 
+    [基本语法<br>](https://github.com/princewen/tensorflow_practice/blob/master/basic/basic.py) 
     tensorBoard使用<br> 
     dropout<br> 
     基本神经网络<br> 
