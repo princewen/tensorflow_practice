@@ -8,7 +8,7 @@ from sklearn.metrics import roc_auc_score
 class AFM(BaseEstimator, TransformerMixin):
 
     def __init__(self, feature_size, field_size,
-                 embedding_size=8,
+                 embedding_size=8,attention_size=10,
                  deep_layers=[32, 32], deep_init_size = 50,
                  dropout_deep=[0.5, 0.5, 0.5],
                  deep_layer_activation=tf.nn.relu,
@@ -25,6 +25,7 @@ class AFM(BaseEstimator, TransformerMixin):
         self.feature_size = feature_size
         self.field_size = field_size
         self.embedding_size = embedding_size
+        self.attention_size = attention_size
 
         self.deep_layers = deep_layers
         self.deep_init_size = deep_init_size
@@ -73,29 +74,43 @@ class AFM(BaseEstimator, TransformerMixin):
             feat_value = tf.reshape(self.feat_value,shape=[-1,self.field_size,1])
             self.embeddings = tf.multiply(self.embeddings,feat_value) # N * F * K
 
+
+            # element_wise
+            element_wise_product_list = []
+            for i in range(self.field_size):
+                for j in range(i+1,self.field_size):
+                    element_wise_product_list.append(tf.multiply(self.embeddings[:,i,:],self.embeddings[:,j,:])) # None * K
+
+            self.element_wise_product = tf.stack(element_wise_product_list) # (F * F - 1 / 2) * None * K
+            self.element_wise_product = tf.transpose(self.element_wise_product,perm=[1,0,2],name='element_wise_product') # None * (F * F - 1 / 2) *  K
+
+            #self.interaction
+
+            # attention part
+            num_interactions = int(self.field_size * (self.field_size - 1) / 2)
+            # wx+b -> relu(wx+b) -> h*relu(wx+b)
+            self.attention_wx_plus_b = tf.reshape(tf.add(tf.matmul(tf.reshape(self.element_wise_product,shape=(-1,self.embedding_size)),
+                                                                   self.weights['attention_w']),
+                                                         self.weights['attention_b']),
+                                                  shape=[-1,num_interactions,self.attention_size]) # N * ( F * F - 1 / 2) * A
+
+            self.attention_exp = tf.exp(tf.reduce_sum(tf.multiply(tf.nn.relu(self.attention_wx_plus_b),
+                                                           self.weights['attention_h']),
+                                               axis=2,keep_dims=True)) # N * ( F * F - 1 / 2) * 1
+
+            self.attention_exp_sum = tf.reduce_sum(self.attention_exp,axis=1,keep_dims=True) # N * 1 * 1
+
+            self.attention_out = tf.div(self.attention_exp,self.attention_exp_sum,name='attention_out')  # N * ( F * F - 1 / 2) * 1
+
+            self.attention_x_product = tf.reduce_sum(tf.multiply(self.attention_out,self.element_wise_product),axis=1,name='afm') # N * K
+
+            self.attention_part_sum = tf.matmul(self.attention_x_product,self.weights['attention_p']) # N * 1
+
+
+
             # first order term
             self.y_first_order = tf.nn.embedding_lookup(self.weights['feature_bias'], self.feat_index)
             self.y_first_order = tf.reduce_sum(tf.multiply(self.y_first_order, feat_value), 2)
-
-
-            # second order term
-            # sum-square-part
-            self.summed_features_emb = tf.reduce_sum(self.embeddings, 1)  # None * k
-            self.summed_features_emb_square = tf.square(self.summed_features_emb)  # None * K
-
-            # squre-sum-part
-            self.squared_features_emb = tf.square(self.embeddings)
-            self.squared_sum_features_emb = tf.reduce_sum(self.squared_features_emb, 1)  # None * K
-
-            # second order
-            self.y_second_order = 0.5 * tf.subtract(self.summed_features_emb_square, self.squared_sum_features_emb)
-
-            # Deep component
-            self.y_deep = self.y_second_order
-            for i in range(0, len(self.deep_layers)):
-                self.y_deep = tf.add(tf.matmul(self.y_deep, self.weights["layer_%d" % i]), self.weights["bias_%d" % i])
-                self.y_deep = self.deep_layers_activation(self.y_deep)
-                self.y_deep = tf.nn.dropout(self.y_deep, self.dropout_keep_deep[i + 1])
 
             # bias
             self.y_bias = self.weights['bias'] * tf.ones_like(self.label)
@@ -103,8 +118,8 @@ class AFM(BaseEstimator, TransformerMixin):
 
             # out
             self.out = tf.add_n([tf.reduce_sum(self.y_first_order,axis=1,keep_dims=True),
-                                 tf.reduce_sum(self.y_deep,axis=1,keep_dims=True),
-                                 self.y_bias])
+                                 self.attention_part_sum,
+                                 self.y_bias],name='out_afm')
 
             # loss
             if self.loss_type == "logloss":
@@ -159,27 +174,20 @@ class AFM(BaseEstimator, TransformerMixin):
         weights['feature_bias'] = tf.Variable(tf.random_normal([self.feature_size,1],0.0,1.0),name='feature_bias')
         weights['bias'] = tf.Variable(tf.constant(0.1),name='bias')
 
-        #deep layers
-        num_layer = len(self.deep_layers)
-        input_size = self.embedding_size
-        glorot = np.sqrt(2.0/(input_size + self.deep_layers[0]))
+        # attention part
+        glorot = np.sqrt(2.0 / (self.attention_size + self.embedding_size))
 
-        weights['layer_0'] = tf.Variable(
-            np.random.normal(loc=0,scale=glorot,size=(input_size,self.deep_layers[0])),dtype=np.float32
-        )
-        weights['bias_0'] = tf.Variable(
-            np.random.normal(loc=0,scale=glorot,size=(1,self.deep_layers[0])),dtype=np.float32
-        )
+        weights['attention_w'] = tf.Variable(np.random.normal(loc=0,scale=glorot,size=(self.embedding_size,self.attention_size)),
+                                             dtype=tf.float32,name='attention_w')
+
+        weights['attention_b'] = tf.Variable(np.random.normal(loc=0,scale=glorot,size=(self.attention_size,)),
+                                             dtype=tf.float32,name='attention_b')
+
+        weights['attention_h'] = tf.Variable(np.random.normal(loc=0,scale=1,size=(self.attention_size,)),
+                                             dtype=tf.float32,name='attention_h')
 
 
-        for i in range(1,num_layer):
-            glorot = np.sqrt(2.0 / (self.deep_layers[i - 1] + self.deep_layers[i]))
-            weights["layer_%d" % i] = tf.Variable(
-                np.random.normal(loc=0, scale=glorot, size=(self.deep_layers[i - 1], self.deep_layers[i])),
-                dtype=np.float32)  # layers[i-1] * layers[i]
-            weights["bias_%d" % i] = tf.Variable(
-                np.random.normal(loc=0, scale=glorot, size=(1, self.deep_layers[i])),
-                dtype=np.float32)  # 1 * layer[i]
+        weights['attention_p'] = tf.Variable(np.ones((self.embedding_size,1)),dtype=np.float32)
 
         return weights
 
