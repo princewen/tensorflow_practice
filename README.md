@@ -40,6 +40,7 @@ Tensroflow练习
 [DeepFM<br>](https://github.com/princewen/tensorflow_practice/tree/master/recommendation/Basic-DeepFM-model)
 [Deep Cross Network<br>](https://github.com/princewen/tensorflow_practice/tree/master/recommendation/Basic-DCN-Demo)
 [PNN<br>](https://github.com/princewen/tensorflow_practice/tree/master/recommendation/Basic-PNN-Demo)
+[NFM<br>](https://github.com/princewen/tensorflow_practice/tree/master/recommendation/Basic-NFM-Demo)
 <br>
 5、GAN<br>
 [Basic GAN<br>](https://github.com/princewen/tensorflow_practice/blob/master/GAN/GAN.py)
