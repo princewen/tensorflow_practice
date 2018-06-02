@@ -31,7 +31,7 @@ params = {
     'boosting_type': 'gbdt',
     'objective': 'binary',
     'metric': {'binary_logloss'},
-    'num_leaves': 63,
+    'num_leaves': 64,
     'num_trees': 100,
     'learning_rate': 0.01,
     'feature_fraction': 0.9,
@@ -41,7 +41,7 @@ params = {
 }
 
 # number of leaves,will be used in feature transformation
-num_leaf = 63
+num_leaf = 64
 
 print('Start training...')
 # train
@@ -59,6 +59,7 @@ print('Start predicting...')
 y_pred = gbm.predict(X_train, pred_leaf=True)
 
 print(np.array(y_pred).shape)
+print(y_pred[:10])
 
 print('Writing transformed training data')
 transformed_training_matrix = np.zeros([len(y_pred), len(y_pred[0]) * num_leaf],

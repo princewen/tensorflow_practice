@@ -53,6 +53,8 @@ __pycache__/
 model/
 
 */data/
+*/graphs/
+
 
 *.pkl
 
