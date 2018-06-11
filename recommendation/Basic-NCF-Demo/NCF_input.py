@@ -118,6 +118,8 @@ def dump_data(features,labels,user_negative,num_neg,is_training):
 
     data_dict = dict([('user', features['user']),
                       ('item', features['item']), ('label', labels)])
+
+    print(data_dict)
     if is_training:
         np.save(os.path.join(DATA_PATH, 'train_data.npy'), data_dict)
     else:
