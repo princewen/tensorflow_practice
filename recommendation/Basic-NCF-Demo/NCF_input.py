@@ -37,7 +37,7 @@ def load_data():
     user_bought = {}
     for i in range(len(full_data)):
         u = full_data['user'][i]
-        t = full_data['user'][i]
+        t = full_data['item'][i]
         if u not in user_bought:
             user_bought[u] = []
         user_bought[u].append(t)
