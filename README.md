@@ -100,7 +100,6 @@ Tensroflow练习
 [推荐系统遇上深度学习(十五)--强化学习在京东推荐中的探索
 <br>](https://www.jianshu.com/p/b9113332e33e)
 [推荐系统遇上深度学习(十六)--详解推荐系统中的常用评测指标<br>](https://www.jianshu.com/p/665f9f168eff)
-<br>
 [推荐系统遇上深度学习(十七)--探秘阿里之MLR算法浅析及实现<br>](https://www.jianshu.com/p/627fc0d755b2)
 <br>
 5、GAN<br>
