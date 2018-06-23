@@ -41,6 +41,13 @@ Tensroflow练习
 [Deep Cross Network<br>](https://github.com/princewen/tensorflow_practice/tree/master/recommendation/Basic-DCN-Demo)
 [PNN<br>](https://github.com/princewen/tensorflow_practice/tree/master/recommendation/Basic-PNN-Demo)
 [NFM<br>](https://github.com/princewen/tensorflow_practice/tree/master/recommendation/Basic-NFM-Demo)
+[AFM<br>](https://github.com/princewen/tensorflow_practice/tree/master/recommendation/Basic-AFM-Demo)
+[GBDT+LR<br>](https://github.com/princewen/tensorflow_practice/tree/master/recommendation/GBDT%2BLR-Demo)
+[Bandit<br>](https://github.com/princewen/tensorflow_practice/tree/master/recommendation/Basic-Bandit-Demo)
+[NCF<br>](https://github.com/princewen/tensorflow_practice/tree/master/recommendation/Basic-NCF-Demo)
+[Evaluation-metrics<br>](https://github.com/princewen/tensorflow_practice/tree/master/recommendation/Basic-Evaluation-metrics)
+[MLR<br>](https://github.com/princewen/tensorflow_practice/tree/master/recommendation/Basic-MLR-Demo)
+[DIN<br>](https://github.com/princewen/tensorflow_practice/tree/master/recommendation/Basic-DIN-Demo)
 <br>
 5、GAN<br>
 [Basic GAN<br>](https://github.com/princewen/tensorflow_practice/blob/master/GAN/GAN.py)
@@ -82,6 +89,19 @@ Tensroflow练习
 [推荐系统遇上深度学习(四)--多值离散特征的embedding解决方案<br>](https://www.jianshu.com/p/4a7525c018b2)
 [推荐系统遇上深度学习(五)--Deep&Cross Network模型理论和实践<br>](https://www.jianshu.com/p/77719fc252fa)
 [推荐系统遇上深度学习(六)--PNN模型理论和实践<br>](https://www.jianshu.com/p/be784ab4abc2)
+[推荐系统遇上深度学习(七)--NFM模型理论和实践<br>](https://www.jianshu.com/p/4e65723ee632)
+[推荐系统遇上深度学习(八)--AFM模型理论和实践<br>](https://www.jianshu.com/p/83d3b2a1e55d)
+[推荐系统遇上深度学习(九)--评价指标AUC原理及实践<br>](https://www.jianshu.com/p/4dde15a56d44)
+[推荐系统遇上深度学习(十)--GBDT+LR融合方案实战<br>](https://www.jianshu.com/p/96173f2c2fb4)
+[推荐系统遇上深度学习(十一)--神经协同过滤NCF原理及实战<br>](https://www.jianshu.com/p/6173dbde4f53)
+[推荐系统遇上深度学习(十二)--推荐系统中的EE问题及基本Bandit算法<br>](https://www.jianshu.com/p/95b2de50ce44)
+[推荐系统遇上深度学习(十三)--linUCB方法浅析及实现<br>](https://www.jianshu.com/p/e0e843d78e3c)
+[推荐系统遇上深度学习(十四)--《DRN:A Deep Reinforcement Learning Framework for News Recommendation》<br>](https://www.jianshu.com/p/c0384b213320)
+[推荐系统遇上深度学习(十五)--强化学习在京东推荐中的探索
+<br>](https://www.jianshu.com/p/b9113332e33e)
+[推荐系统遇上深度学习(十六)--详解推荐系统中的常用评测指标<br>](https://www.jianshu.com/p/665f9f168eff)
+<br>
+[推荐系统遇上深度学习(十七)--探秘阿里之MLR算法浅析及实现<br>](https://www.jianshu.com/p/627fc0d755b2)
 <br>
 5、GAN<br>
 [听说GAN很高大上，其实就这么简单<br>](https://www.jianshu.com/p/5f638f493b7a)
