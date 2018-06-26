@@ -2,6 +2,7 @@ import tensorflow as tf
 import time
 from sklearn.metrics import roc_auc_score
 from data import get_data
+import pandas as pd
 
 
 
@@ -29,7 +30,7 @@ sess = tf.Session()
 sess.run(init_op)
 train_x,train_y,test_x,test_y = get_data()
 
-
+result = []
 time_s=time.time()
 for epoch in range(0,10000):
     f_dict = {x: train_x, y: train_y}
@@ -41,3 +42,6 @@ for epoch in range(0,10000):
         _, cost_, predict_test = sess.run([train_op, cost, pred], feed_dict=f_dict)
         test_auc = roc_auc_score(test_y, predict_test)
         print("%d %ld cost:%f,train_auc:%f,test_auc:%f" % (epoch, (time_t-time_s),cost_,auc,test_auc))
+        result.append([epoch, (time_t - time_s), auc, test_auc])
+
+pd.DataFrame(result, columns=['epoch', 'time', 'train_auc', 'test_auc']).to_csv("data/lr.csv")

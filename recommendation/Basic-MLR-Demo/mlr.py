@@ -9,7 +9,7 @@ x = tf.placeholder(tf.float32,shape=[None,108])
 y = tf.placeholder(tf.float32,shape=[None])
 
 
-m = 5
+m = 2
 learning_rate = 0.3
 u = tf.Variable(tf.random_normal([108,m],0.0,0.5),name='u')
 w = tf.Variable(tf.random_normal([108,m],0.0,0.5),name='w')
@@ -23,9 +23,7 @@ p2 = tf.nn.sigmoid(W)
 pred = tf.reduce_sum(tf.multiply(p1,p2),1)
 
 cost1=tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=pred, labels=y))
-
 cost=tf.add_n([cost1])
-
 train_op = tf.train.FtrlOptimizer(learning_rate).minimize(cost)
 train_x,train_y,test_x,test_y = get_data()
 time_s=time.time()
