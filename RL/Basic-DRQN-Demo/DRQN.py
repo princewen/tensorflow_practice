@@ -166,12 +166,12 @@ with tf.Session() as sess:
             j += 1
             # Choose an action by greedily (with e chance of random action) from the Q-network
             if np.random.rand(1) < e or total_steps < pre_train_steps:
-                state1 = sess.run(mainQN.rnn_state, \
+                state1 = sess.run(mainQN.rnn_state, 
                                   feed_dict={mainQN.scalarInput: [s / 255.0], mainQN.trainLength: 1,
                                              mainQN.state_in: state, mainQN.batch_size: 1})
                 a = np.random.randint(0, 4)
             else:
-                a, state1 = sess.run([mainQN.predict, mainQN.rnn_state], \
+                a, state1 = sess.run([mainQN.predict, mainQN.rnn_state],
                                      feed_dict={mainQN.scalarInput: [s / 255.0], mainQN.trainLength: 1,
                                                 mainQN.state_in: state, mainQN.batch_size: 1})
                 a = a[0]
