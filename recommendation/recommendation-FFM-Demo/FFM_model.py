@@ -112,8 +112,8 @@ if __name__ == '__main__':
             tf.reduce_sum(tf.multiply(lambda_v, tf.pow(thirdWeight, 2)),axis=[1,2])
         )
     )
-
-    loss = tf.log(1 + tf.exp(input_y * y_)) + l2_norm
+    #for single instance per round，`tf.reduce_sum` can be ignored
+    loss = tf.log(1 + tf.exp(-input_y * y_)) + l2_norm
 
     train_step = tf.train.GradientDescentOptimizer(learning_rate=lr).minimize(loss)
 
