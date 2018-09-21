@@ -2,6 +2,8 @@
 logs/
 .iml
 .model
+checkpoint/
+cache/
 .csv
 .xlsx
 .json

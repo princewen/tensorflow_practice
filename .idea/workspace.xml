@@ -2,8 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69f12537-6c3d-43b1-a62a-ad07d70a14cd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/checkpoint/epoch_0.data-00000-of-00001" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/checkpoint/epoch_0.index" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/checkpoint/epoch_0.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/checkpoint/epoch_5.data-00000-of-00001" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/checkpoint/epoch_5.index" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/checkpoint/epoch_5.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/IO/base_cache.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/IO/ffm_cache.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/IO/iterator.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/batch_size_128_infer.userid.tfrecord" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/batch_size_128_test.userid.tfrecord" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/batch_size_128_train.userid.tfrecord" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/batch_size_128_val.userid.tfrecord" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/eval_impressionId.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/eval_num.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/feat_cnt.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/infer_impressionId.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/infer_num.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/test_impressionId.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/test_num.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/train_impressionId.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/train_num.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/checkpoint/checkpoint" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/config/base.yaml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/config/exDeepFM.yaml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/config/network.yaml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/main.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/res/infer.userid.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/src/CIN.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/src/base_model.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/src/exDeepFM.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/train.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/utils/log.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/utils/metric.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/utils/util.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RL/Basic-DRQN-Demo/DRQN.py" afterPath="$PROJECT_DIR$/RL/Basic-DRQN-Demo/DRQN.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,32 +48,29 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/tensorflow1_2$netease.coverage" NAME="netease Coverage Results" MODIFIED="1534173544289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$gen_model.coverage" NAME="gen_model Coverage Results" MODIFIED="1532186281780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$zhihu.coverage" NAME="zhihu Coverage Results" MODIFIED="1535904633696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$lr.coverage" NAME="lr Coverage Results" MODIFIED="1529722387251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-MLR-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$mlr.coverage" NAME="mlr Coverage Results" MODIFIED="1529722291768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-MLR-Demo" />
-    <SUITE FILE_PATH="coverage/tensorflow1_2$plotResult.coverage" NAME="plotResult Coverage Results" MODIFIED="1529723400750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-MLR-Demo" />
-    <SUITE FILE_PATH="coverage/tensorflow1_2$main.coverage" NAME="main Coverage Results" MODIFIED="1527934573931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-NCF-Demo" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$multi_task_joint_training.coverage" NAME="multi-task-joint-training Coverage Results" MODIFIED="1533110252951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/basic/multi-task-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$BPR.coverage" NAME="BPR Coverage Results" MODIFIED="1530202420711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-BPR-Demo" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$main.coverage" NAME="main Coverage Results" MODIFIED="1537520813558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$NDCG.coverage" NAME="NDCG Coverage Results" MODIFIED="1529307976227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-Evaluation-metrics" />
-    <SUITE FILE_PATH="coverage/tensorflow1_2$DRQN.coverage" NAME="DRQN Coverage Results" MODIFIED="1530434931296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RL/Basic-DRQN-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$tf_data_demo.coverage" NAME="tf_data_demo Coverage Results" MODIFIED="1528181619719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-NCF-Demo" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$multi_task_alternate_training.coverage" NAME="multi-task-alternate-training Coverage Results" MODIFIED="1533109405226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/basic/multi-task-Demo" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$zhihu2.coverage" NAME="zhihu2 Coverage Results" MODIFIED="1535979949880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$cf_gan.coverage" NAME="cf_gan Coverage Results" MODIFIED="1532187563319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$plotResult.coverage" NAME="plotResult Coverage Results" MODIFIED="1529723400750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-MLR-Demo" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$tf_practice.coverage" NAME="tf_practice Coverage Results" MODIFIED="1537521013515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/test_some_code" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$train.coverage" NAME="train Coverage Results" MODIFIED="1537519892338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$DRQN.coverage" NAME="DRQN Coverage Results" MODIFIED="1530434931296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RL/Basic-DRQN-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$data.coverage" NAME="data Coverage Results" MODIFIED="1529689500332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-MLR-Demo" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DRQN.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RL/Basic-DRQN-Demo/DRQN.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2355">
-              <caret line="168" column="52" lean-forward="false" selection-start-line="168" selection-start-column="52" selection-end-line="168" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rollout.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GAN/seqgan/rollout.py">
+      <file leaf-file-name="eval_num.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/eval_num.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -47,70 +79,74 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generator.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GAN/seqgan/generator.py">
+      <file leaf-file-name="tf_practice.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/test_some_code/tf_practice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
-              <caret line="120" column="30" lean-forward="false" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
+            <state relative-caret-position="240">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="discriminator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GAN/seqgan/discriminator.py">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="48" column="28" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+            <state relative-caret-position="2085">
+              <caret line="143" column="29" lean-forward="false" selection-start-line="143" selection-start-column="29" selection-end-line="143" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Newton Interpolation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendation/Newton Interpolation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#0#23#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="helper.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RL/Basic-DRQN-Demo/helper.py">
+      <file leaf-file-name="multi-value-feature.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendation/multi-value-feature.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="util.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/utils/util.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="16" />
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RNN_dynamic_cell.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nlp/RNN_dynamic_cell.py">
+      <file leaf-file-name="network.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/config/network.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LSTM.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nlp/LSTM.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="41" column="66" lean-forward="false" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gridworld.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RL/Basic-DRQN-Demo/gridworld.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1740">
-              <caret line="120" column="27" lean-forward="false" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,6 +166,7 @@
       <find>out</find>
       <find>46</find>
       <find>5956</find>
+      <find>save</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,6 +204,29 @@
         <option value="$PROJECT_DIR$/RL/Basic-DRQN-Demo/gridworld.py" />
         <option value="$PROJECT_DIR$/RL/Basic-DRQN-Demo/helper.py" />
         <option value="$PROJECT_DIR$/RL/Basic-DRQN-Demo/DRQN.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo/utils.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo/gen_model.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo/dis_model.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo/cf_gan.py" />
+        <option value="$PROJECT_DIR$/basic/multi-task-Demo/multi-task-alternate-training.py" />
+        <option value="$PROJECT_DIR$/basic/multi-task-Demo/multi-task-joint-training.py" />
+        <option value="$PROJECT_DIR$/recommendation/netease.py" />
+        <option value="$PROJECT_DIR$/zhihu.py" />
+        <option value="$PROJECT_DIR$/zhihu2.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/utils/log.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/main.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/IO/base_cache.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/utils/util.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/exDeepFM.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/utils/metric.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/IO/iterator.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/train.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/IO/ffm_cache.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/src/base_model.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/src/exDeepFM.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/config/network.yaml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/test_some_code/tf_practice.py" />
       </list>
     </option>
   </component>
@@ -176,10 +236,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1920" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -206,33 +265,32 @@
             <path>
               <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
               <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
-              <item name="basic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
-              <item name="GAN" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
-              <item name="GAN" type="462c0819:PsiDirectoryNode" />
-              <item name="seqgan" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
-              <item name="nlp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
               <item name="other" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
               <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
-              <item name="RL" type="462c0819:PsiDirectoryNode" />
+              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
+              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
+              <item name="Basic-XDeepFM-Demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
+              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
+              <item name="Basic-XDeepFM-Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
+              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
+              <item name="Basic-XDeepFM-Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="test_some_code" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -249,11 +307,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/test_some_code" />
+      <recent name="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo" />
+      <recent name="$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo" />
+      <recent name="$PROJECT_DIR$/recommendation" />
       <recent name="$PROJECT_DIR$/recommendation/Basic-BPR-Demo" />
-      <recent name="$PROJECT_DIR$/recommendation/Basic-DIN-Demo" />
-      <recent name="$PROJECT_DIR$/recommendation/Basic-MLR-Demo/data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/test_some_code" />
+      <recent name="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo" />
+      <recent name="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/res" />
       <recent name="$PROJECT_DIR$/recommendation" />
     </key>
   </component>
@@ -269,111 +332,111 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.DRQN">
-    <configuration name="BPR" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.tf_practice">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recommendation/Basic-BPR-Demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tensorflow1.2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recommendation/Basic-BPR-Demo/BPR.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="DRQN" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="tf_practice" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RL/Basic-DRQN-Demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/test_some_code" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tensorflow1.2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RL/Basic-DRQN-Demo/DRQN.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/test_some_code/tf_practice.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="lr" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recommendation/Basic-MLR-Demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tensorflow1.2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recommendation/Basic-MLR-Demo/lr.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/train.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="mlr" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="zhihu" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recommendation/Basic-MLR-Demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tensorflow1.2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recommendation/Basic-MLR-Demo/mlr.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zhihu.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="plotResult" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="zhihu2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recommendation/Basic-MLR-Demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tensorflow1.2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recommendation/Basic-MLR-Demo/plotResult.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zhihu2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.mlr" />
-      <item index="1" class="java.lang.String" itemvalue="Python.lr" />
-      <item index="2" class="java.lang.String" itemvalue="Python.plotResult" />
-      <item index="3" class="java.lang.String" itemvalue="Python.BPR" />
-      <item index="4" class="java.lang.String" itemvalue="Python.DRQN" />
+      <item index="0" class="java.lang.String" itemvalue="Python.zhihu" />
+      <item index="1" class="java.lang.String" itemvalue="Python.zhihu2" />
+      <item index="2" class="java.lang.String" itemvalue="Python.train" />
+      <item index="3" class="java.lang.String" itemvalue="Python.main" />
+      <item index="4" class="java.lang.String" itemvalue="Python.tf_practice" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.DRQN" />
-        <item index="1" class="java.lang.String" itemvalue="Python.BPR" />
-        <item index="2" class="java.lang.String" itemvalue="Python.plotResult" />
-        <item index="3" class="java.lang.String" itemvalue="Python.lr" />
-        <item index="4" class="java.lang.String" itemvalue="Python.mlr" />
+        <item index="0" class="java.lang.String" itemvalue="Python.tf_practice" />
+        <item index="1" class="java.lang.String" itemvalue="Python.main" />
+        <item index="2" class="java.lang.String" itemvalue="Python.train" />
+        <item index="3" class="java.lang.String" itemvalue="Python.zhihu2" />
+        <item index="4" class="java.lang.String" itemvalue="Python.zhihu" />
       </list>
     </recent_temporary>
   </component>
@@ -400,18 +463,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11395101" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35693848" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5296252" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44860944" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14822336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25634825" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39782345" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -432,331 +495,34 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/src/base_model.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/src/base_model.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-NCF-Demo/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" column="28" lean-forward="false" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/ops/gen_dataset_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="576" column="4" lean-forward="false" selection-start-line="576" selection-start-column="4" selection-end-line="576" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/data/ops/iterator_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="26" column="6" lean-forward="false" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-Bandit-Demo/Baisc-UCB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/numpy/core/numeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="2364" column="4" lean-forward="false" selection-start-line="2364" selection-start-column="4" selection-end-line="2364" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-Bandit-Demo/Basic-LinUCB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="47" column="19" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="47" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RL/Basic-MADDPG-Demo/test_three_agent_maddpg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RL/Basic-MADDPG-Demo/model_agent_maddpg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="73" column="76" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="73" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RL/Basic-MADDPG-Demo/three_agent_maddpg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="25" lean-forward="false" selection-start-line="137" selection-start-column="12" selection-end-line="145" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-Evaluation-metrics/AUC.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-NCF-Demo/tf_data_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="43" column="48" lean-forward="false" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-NCF-Demo/metrics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="21" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-Evaluation-metrics/NDCG.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-Evaluation-metrics/MAP.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-Evaluation-metrics/HR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-Evaluation-metrics/MRR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-NCF-Demo/NCF.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="44" column="56" lean-forward="false" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-NCF-Demo/NCF_input.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-NCF-Demo/data/train_data.npy">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-NCF-Demo/data/test_data.npy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="283" lean-forward="false" selection-start-line="14" selection-start-column="283" selection-end-line="14" selection-end-column="283" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/ops/nn_impl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="99" column="4" lean-forward="false" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/training/ftrl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-572">
-          <caret line="36" column="6" lean-forward="false" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/pandas/core/generic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="2128" column="8" lean-forward="false" selection-start-line="2128" selection-start-column="8" selection-end-line="2128" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-MLR-Demo/data/adult.test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="111" lean-forward="false" selection-start-line="26" selection-start-column="111" selection-end-line="26" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-MLR-Demo/data/adult.data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-MLR-Demo/data/mlr_15.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-MLR-Demo/data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29145">
-          <caret line="1973" column="4" lean-forward="false" selection-start-line="1973" selection-start-column="4" selection-end-line="1973" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-MLR-Demo/mlr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="46" column="102" lean-forward="false" selection-start-line="44" selection-start-column="12" selection-end-line="46" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-MLR-Demo/lr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="32" column="11" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-MLR-Demo/data/test_zhexian.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-MLR-Demo/plotResult.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIN-Demo/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIN-Demo/data/meta_Electronics.json">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIN-Demo/data/reviews_Electronics_5.json">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIN-Demo/dataset.pkl">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIN-Demo/input.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIN-Demo/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-BPR-Demo/data/mku.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="86" column="10" lean-forward="false" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-BPR-Demo/BPR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="98" column="4" lean-forward="false" selection-start-line="98" selection-start-column="4" selection-end-line="101" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlp/RNN_dynamic_cell.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nlp/LSTM.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="41" column="66" lean-forward="false" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="1213" column="4" lean-forward="false" selection-start-line="1213" selection-start-column="4" selection-end-line="1213" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -764,9 +530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1740">
           <caret line="120" column="27" lean-forward="false" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -774,17 +537,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RL/Basic-DRQN-Demo/DRQN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2355">
+        <state relative-caret-position="0">
           <caret line="168" column="52" lean-forward="false" selection-start-line="168" selection-start-column="52" selection-end-line="168" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -792,24 +551,333 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GAN/seqgan/discriminator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
-          <caret line="48" column="28" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+          <caret line="48" column="28" lean-forward="false" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GAN/seqgan/generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
+        <state relative-caret-position="525">
           <caret line="120" column="30" lean-forward="false" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo/ml-100k/gan_generator.pkl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1021">
+          <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/GBDT+LR-Demo/data/train.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/framework/common_shapes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="702" column="69" lean-forward="true" selection-start-line="702" selection-start-column="69" selection-end-line="702" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/ops/variables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-817">
+          <caret line="122" column="6" lean-forward="false" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo/cf_gan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/multi-task-Demo/multi-task-alternate-training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="32" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="39" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/CNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.2/python_stubs/-1877576585/numpy/random/mtrand.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29475">
+          <caret line="1969" column="4" lean-forward="false" selection-start-line="1969" selection-start-column="4" selection-end-line="1969" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo/gen_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo/dis_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/multi-task-Demo/multi-task-joint-training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/netease.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4620">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhihu2.py" />
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DeepFM-model/DeepFM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="103" column="57" lean-forward="false" selection-start-line="103" selection-start-column="35" selection-end-line="103" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/utils/log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/data/dnn/val.userid.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/batch_size_128_infer.userid.tfrecord">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/feat_cnt.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3813">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/infer_num.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/res/exDeepFM.py" />
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/infer_impressionId.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-815">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/framework/sparse_tensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="104" column="6" lean-forward="false" selection-start-line="104" selection-start-column="6" selection-end-line="104" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/data/dnn/infer.userid.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="1213" column="4" lean-forward="false" selection-start-line="1213" selection-start-column="4" selection-end-line="1213" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhihu.py" />
+    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/ops/random_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2921">
+          <caret line="318" column="4" lean-forward="false" selection-start-line="318" selection-start-column="4" selection-end-line="318" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/utils/metric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIN-Demo/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="136" column="8" lean-forward="false" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+          <folding>
+            <element signature="e#46#64#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/IO/ffm_cache.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="67" column="29" lean-forward="false" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/IO/base_cache.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="64" lean-forward="false" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/IO/iterator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2224">
+          <caret line="207" column="0" lean-forward="false" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/src/base_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2745">
+          <caret line="183" column="78" lean-forward="false" selection-start-line="183" selection-start-column="78" selection-end-line="183" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/src/exDeepFM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="409" column="0" lean-forward="false" selection-start-line="409" selection-start-column="0" selection-end-line="409" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/cache/eval_num.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2085">
+          <caret line="143" column="29" lean-forward="false" selection-start-line="143" selection-start-column="29" selection-end-line="143" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Newton Interpolation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/multi-value-feature.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/utils/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/config/network.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/test_some_code/tf_practice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
