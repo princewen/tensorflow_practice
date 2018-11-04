@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69f12537-6c3d-43b1-a62a-ad07d70a14cd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CV/ResNet/resnet_mnist.py" afterPath="$PROJECT_DIR$/CV/ResNet/resnet_mnist.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendation/Basic-DIN-Demo/model.py" afterPath="$PROJECT_DIR$/recommendation/Basic-DIN-Demo/model.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendation/recommendation-FM-demo/FM_model.py" afterPath="$PROJECT_DIR$/recommendation/recommendation-FM-demo/FM_model.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/Dice.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/model.py" afterPath="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/model.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/utils.py" afterPath="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/utils.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,7 +37,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="train.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/train.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-88">
@@ -46,6 +45,16 @@
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data_iterator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/source_code/data_iterator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -59,14 +68,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="88" column="17" lean-forward="false" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -108,8 +115,8 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="435">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -120,26 +127,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
               <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="decorators.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/nltk/decorators.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="131" column="8" lean-forward="false" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dice.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/Dice.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -218,14 +205,14 @@
         <option value="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/shuffle.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-DIN-Demo/model.py" />
-        <option value="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/utils.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/VecAttGruCell.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/rnn.py" />
-        <option value="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/model.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/vecAttGruCell.py" />
-        <option value="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/Dice.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/data_iterator.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/train.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/Dice.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/utils.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/model.py" />
       </list>
     </option>
   </component>
@@ -286,19 +273,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo" />
-      <recent name="$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo/ml-100k" />
-      <recent name="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/test_some_code" />
-      <recent name="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo" />
-      <recent name="$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/data" />
       <recent name="$PROJECT_DIR$/CV" />
       <recent name="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/test_some_code" />
       <recent name="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo" />
       <recent name="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/res" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/source_code" />
+      <recent name="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo" />
+      <recent name="$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo/ml-100k" />
+      <recent name="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/test_some_code" />
+      <recent name="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -447,15 +434,15 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19027181" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19027181" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5090689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5090689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2756953" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2756953" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39782345" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -501,13 +488,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/utils/metric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -790,26 +770,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/vecAttGruCell.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/Dice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -849,16 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="88" column="17" lean-forward="false" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-88">
@@ -866,6 +820,38 @@
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/source_code/data_iterator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/Dice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
