@@ -4,8 +4,7 @@ from tensorflow.python.ops.rnn_cell import GRUCell
 
 from rnn import dynamic_rnn
 
-from Dice import dice
-from utils import prelu,din_fcn_attention
+from utils import prelu,din_fcn_attention,dice
 from vecAttGruCell import VecAttGRUCell
 
 
