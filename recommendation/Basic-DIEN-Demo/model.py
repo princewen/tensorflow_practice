@@ -13,19 +13,19 @@ from vecAttGruCell import VecAttGRUCell
 class Model(object):
     def __init__(self,n_uid, n_mid, n_cat, EMBEDDING_DIM, HIDDEN_SIZE, ATTENTION_SIZE, use_negsampling = False):
         with tf.name_scope("Inputs"):
-            self.mid_his_batch_ph = tf.placeholder(tf.int32,[None,None],name='mid_his_batch_ph')
-            self.cat_his_batch_ph = tf.placeholder(tf.int32,[None,None],name='cat_his_batch_ph')
-            self.uid_batch_ph = tf.placeholder(tf.int32,[None,],name='uid_batch_ph')
-            self.mid_batch_ph = tf.placeholder(tf.int32,[None,],name='mid_batch_ph')
-            self.cat_batch_ph = tf.placeholder(tf.int32,[None,],name='cat_batch_ph')
-            self.mask = tf.placeholder(tf.float32,[None,None],name='mask')
-            self.seq_len_ph = tf.placeholder(tf.int32,[None],name='seq_len_ph')
-            self.target_ph = tf.placeholder(tf.float32,[None,None],name='target_ph')
-            self.lr = tf.placeholder(tf.float64,[])
+            self.mid_his_batch_ph = tf.placeholder(tf.int32,[None,None],name='mid_his_batch_ph') # 用户历史行为的item id list
+            self.cat_his_batch_ph = tf.placeholder(tf.int32,[None,None],name='cat_his_batch_ph') # 用户历史行为item对应的cate id list
+            self.uid_batch_ph = tf.placeholder(tf.int32,[None,],name='uid_batch_ph') # 用户id
+            self.mid_batch_ph = tf.placeholder(tf.int32,[None,],name='mid_batch_ph') # target的item id
+            self.cat_batch_ph = tf.placeholder(tf.int32,[None,],name='cat_batch_ph') # target item对应的cateid
+            self.mask = tf.placeholder(tf.float32,[None,None],name='mask') # 历史行为的mask
+            self.seq_len_ph = tf.placeholder(tf.int32,[None],name='seq_len_ph') # 历史行为的长度
+            self.target_ph = tf.placeholder(tf.float32,[None,None],name='target_ph') # 目标值
+            self.lr = tf.placeholder(tf.float64,[]) #
             self.use_negsampling = use_negsampling
             if use_negsampling:
-                self.noclk_mid_batch_ph = tf.placeholder(tf.int32, [None, None, None], name='noclk_mid_batch_ph')
-                self.noclk_cat_batch_ph = tf.placeholder(tf.int32, [None, None, None], name='noclk_cat_batch_ph')
+                self.noclk_mid_batch_ph = tf.placeholder(tf.int32, [None, None, None], name='noclk_mid_batch_ph') # 负采样的数据
+                self.noclk_cat_batch_ph = tf.placeholder(tf.int32, [None, None, None], name='noclk_cat_batch_ph') #
 
         with tf.name_scope("Embedding_layer"):
             self.uid_embeddings_var = tf.get_variable("uid_embedding_var",[n_uid,EMBEDDING_DIM])
