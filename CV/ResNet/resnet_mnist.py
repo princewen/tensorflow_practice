@@ -58,7 +58,7 @@ def train():
     saver = tf.train.Saver()
     with tf.Session() as sess:
         sess.run(tf.global_variables_initializer())
-        for i in range(500):
+        for i in range(10000):
             x_b, y_b = mnist.train.next_batch(batch_size)
             train_op_, loss_, step = sess.run([train_op, loss, global_step], feed_dict={x: x_b, y: y_b})
             if i % 50 == 0:

@@ -129,11 +129,6 @@ class Model(object):
         trainable_params = tf.trainable_variables()
         self.train_op = tf.train.GradientDescentOptimizer(learning_rate=self.lr).minimize(self.loss)
 
-
-
-
-
-
     def train(self,sess,uij,l):
         loss,_ = sess.run([self.loss,self.train_op],feed_dict={
             #self.u : uij[0],

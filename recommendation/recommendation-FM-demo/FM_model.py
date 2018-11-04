@@ -13,7 +13,7 @@ def vectorize_dic(dic,ix=None,p=None,n=0,g=0):
     """
     dic -- dictionary of feature lists. Keys are the name of features
     ix -- index generator (default None)
-    p -- dimension of featrure space (number of columns in the sparse matrix) (default None)
+    p -- dimension of feature space (number of columns in the sparse matrix) (default None)
     """
     if ix==None:
         ix = dict()
