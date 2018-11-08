@@ -75,12 +75,10 @@ class DCN(BaseEstimator, TransformerMixin):
 
             self.x0 = tf.concat([self.numeric_value,
                                  tf.reshape(self.embeddings,shape=[-1,self.field_size * self.embedding_size])]
-                                ,axis=1)
+                                ,axis=1)  # self.embeddings(?, 30, 8)  self.field_size * self.embedding_size = 30 * 8
 
 
             # deep part
-
-
             self.y_deep = tf.nn.dropout(self.x0,self.dropout_keep_deep[0])
 
             for i in range(0,len(self.deep_layers)):
@@ -90,18 +88,22 @@ class DCN(BaseEstimator, TransformerMixin):
 
 
             # cross_part
-            self._x0 = tf.reshape(self.x0, (-1, self.total_size, 1))
-            x_l = self._x0
-            for l in range(self.cross_layer_num):
+            print(self.x0)
+            self._x0 = tf.reshape(self.x0, (-1, self.total_size, 1)) # self.total_size 249  self._x0: (?, 249, 1)
+            x_l = self._x0 #(?, 249, 1)
+            # 交叉网络的特殊结构使交叉特征的程度随着层深度的增加而增大。多项式的最高程度（就输入X0而言）为L层交叉网络L + 1
+            for l in range(self.cross_layer_num):  # self.cross_layer_num3
+                #  x_l+1 = x0 x_l' w_l + b_l + x_l
                 x_l = tf.tensordot(tf.matmul(self._x0, x_l, transpose_b=True),
                                     self.weights["cross_layer_%d" % l],1) + self.weights["cross_bias_%d" % l] + x_l
+                                    # cross_layer_和cross_bias_的size=(self.total_size,1)
 
-            self.cross_network_out = tf.reshape(x_l, (-1, self.total_size))
+            self.cross_network_out = tf.reshape(x_l, (-1, self.total_size)) #(?, 249)
 
-
-            # concat_part
+            # concat_input  (?, 249)
             concat_input = tf.concat([self.cross_network_out, self.y_deep], axis=1)
 
+            # self.out (?, 249)
             self.out = tf.add(tf.matmul(concat_input,self.weights['concat_projection']),self.weights['concat_bias'])
 
             # loss
@@ -150,11 +152,7 @@ class DCN(BaseEstimator, TransformerMixin):
                     variable_parameters *= dim.value
                 total_parameters += variable_parameters
             if self.verbose > 0:
-                print("#params: %d" % total_parameters)
-
-
-
-
+                print("#params: %d" % total_parameters) #13055
 
     def _initialize_weights(self):
         weights = dict()

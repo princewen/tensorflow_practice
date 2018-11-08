@@ -71,39 +71,36 @@ class DeepFM(BaseEstimator, TransformerMixin):
             self.weights = self._initialize_weights()
 
             # model
-            self.embeddings = tf.nn.embedding_lookup(self.weights['feature_embeddings'],self.feat_index) # N * F * K
-            feat_value = tf.reshape(self.feat_value,shape=[-1,self.field_size,1])
-            self.embeddings = tf.multiply(self.embeddings,feat_value)
+            self.embeddings = tf.nn.embedding_lookup(self.weights['feature_embeddings'],self.feat_index) # N * F * K  (?, ?, 8)
+            feat_value = tf.reshape(self.feat_value,shape=[-1,self.field_size,1])  #self.feat_value (?, ?)  feat_value (?, 39, 1)
+            self.embeddings = tf.multiply(self.embeddings,feat_value)              #(?, 39, 8)
 
-
-            # first order term
-            self.y_first_order = tf.nn.embedding_lookup(self.weights['feature_bias'],self.feat_index)
-            self.y_first_order = tf.reduce_sum(tf.multiply(self.y_first_order,feat_value),2)
-            self.y_first_order = tf.nn.dropout(self.y_first_order,self.dropout_keep_fm[0])
+            # first order term weights['feature_bias']是FM中的一次项的权重
+            self.y_first_order = tf.nn.embedding_lookup(self.weights['feature_bias'], self.feat_index) # (?, ?, 1) bias
+            self.y_first_order = tf.reduce_sum(tf.multiply(self.y_first_order, feat_value), 2)         # (?, 39)
+            self.y_first_order = tf.nn.dropout(self.y_first_order, self.dropout_keep_fm[0])
 
             # second order term
             # sum-square-part
-            self.summed_features_emb = tf.reduce_sum(self.embeddings,1) # None * k
-            self.summed_features_emb_square = tf.square(self.summed_features_emb) # None * K
+            self.summed_features_emb = tf.reduce_sum(self.embeddings,1) # None * k  (?, 8)
+            self.summed_features_emb_square = tf.square(self.summed_features_emb) # None * K  (?, 8)  
 
             # squre-sum-part
-            self.squared_features_emb = tf.square(self.embeddings)
-            self.squared_sum_features_emb = tf.reduce_sum(self.squared_features_emb, 1)  # None * K
+            self.squared_features_emb = tf.square(self.embeddings)  #(?, 39, 8) 
+            self.squared_sum_features_emb = tf.reduce_sum(self.squared_features_emb, 1)  # None * K   (?, 8)
 
             #second order
-            self.y_second_order = 0.5 * tf.subtract(self.summed_features_emb_square,self.squared_sum_features_emb)
-            self.y_second_order = tf.nn.dropout(self.y_second_order,self.dropout_keep_fm[1])
-
+            self.y_second_order = 0.5 * tf.subtract(self.summed_features_emb_square, self.squared_sum_features_emb)  # (?, 8)
+            self.y_second_order = tf.nn.dropout(self.y_second_order, self.dropout_keep_fm[1])
 
             # Deep component
-            self.y_deep = tf.reshape(self.embeddings,shape=[-1,self.field_size * self.embedding_size])
-            self.y_deep = tf.nn.dropout(self.y_deep,self.dropout_keep_deep[0])
-
-            for i in range(0,len(self.deep_layers)):
+            self.y_deep = tf.reshape(self.embeddings, shape=[-1,self.field_size * self.embedding_size]) #(?, 312)  =39*8
+            self.y_deep = tf.nn.dropout(self.y_deep, self.dropout_keep_deep[0])
+            
+            for i in range(0, len(self.deep_layers)):
                 self.y_deep = tf.add(tf.matmul(self.y_deep,self.weights["layer_%d" %i]), self.weights["bias_%d"%i])
                 self.y_deep = self.deep_layers_activation(self.y_deep)
                 self.y_deep = tf.nn.dropout(self.y_deep,self.dropout_keep_deep[i+1])
-
 
             #----DeepFM---------
             if self.use_fm and self.use_deep:
@@ -123,8 +120,7 @@ class DeepFM(BaseEstimator, TransformerMixin):
                 self.loss = tf.nn.l2_loss(tf.subtract(self.label, self.out))
             # l2 regularization on weights
             if self.l2_reg > 0:
-                self.loss += tf.contrib.layers.l2_regularizer(
-                    self.l2_reg)(self.weights["concat_projection"])
+                self.loss += tf.contrib.layers.l2_regularizer(self.l2_reg)(self.weights["concat_projection"])
                 if self.use_deep:
                     for i in range(len(self.deep_layers)):
                         self.loss += tf.contrib.layers.l2_regularizer(
@@ -143,7 +139,6 @@ class DeepFM(BaseEstimator, TransformerMixin):
                 self.optimizer = tf.train.MomentumOptimizer(learning_rate=self.learning_rate, momentum=0.95).minimize(
                     self.loss)
 
-
             #init
             self.saver = tf.train.Saver()
             init = tf.global_variables_initializer()
@@ -160,10 +155,6 @@ class DeepFM(BaseEstimator, TransformerMixin):
                 total_parameters += variable_parameters
             if self.verbose > 0:
                 print("#params: %d" % total_parameters)
-
-
-
-
 
     def _initialize_weights(self):
         weights = dict()
@@ -187,7 +178,6 @@ class DeepFM(BaseEstimator, TransformerMixin):
             np.random.normal(loc=0,scale=glorot,size=(1,self.deep_layers[0])),dtype=np.float32
         )
 
-
         for i in range(1,num_layer):
             glorot = np.sqrt(2.0 / (self.deep_layers[i - 1] + self.deep_layers[i]))
             weights["layer_%d" % i] = tf.Variable(
@@ -196,7 +186,6 @@ class DeepFM(BaseEstimator, TransformerMixin):
             weights["bias_%d" % i] = tf.Variable(
                 np.random.normal(loc=0, scale=glorot, size=(1, self.deep_layers[i])),
                 dtype=np.float32)  # 1 * layer[i]
-
 
         # final concat projection layer
 

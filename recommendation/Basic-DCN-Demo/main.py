@@ -73,7 +73,6 @@ folds = list(StratifiedKFold(n_splits=config.NUM_SPLITS, shuffle=True,
 print('process_data_over')
 
 dcn_params = {
-
     "embedding_size": 8,
     "deep_layers": [32, 32],
     "dropout_deep": [0.5, 0.5, 0.5],
