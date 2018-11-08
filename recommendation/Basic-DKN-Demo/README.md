@@ -51,7 +51,7 @@ The code has been tested running under Python 3.6.5, with the following packages
 
 ### Running the code
 ```
-$ cd data/news
+$ cd news
 $ python news_preprocess.py
 $ cd ../kg
 $ python prepare_data_for_transx.py
@@ -60,6 +60,6 @@ $ g++ transE.cpp -o transE -pthread -O3 -march=native
 $ ./transE
 $ cd ../..
 $ python kg_preprocess.py
-$ cd ../../src
+$ cd ../
 $ python main.py (note: use -h to check optional arguments)
 ```
