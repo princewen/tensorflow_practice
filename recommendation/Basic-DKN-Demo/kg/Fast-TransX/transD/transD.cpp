@@ -436,6 +436,7 @@ void* train_transD(void *con) {
 		}
 		printf("epoch %d %f\n", epoch, res);
 	}
+
 }
 
 /*

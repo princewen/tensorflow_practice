@@ -329,7 +329,7 @@ def get_batches(targets,sources,batch_size,source_pad_int,target_pad_int):
 
 # Train
 train_source = source_int[batch_size:]
-train_target = source_int[batch_size:]
+train_target = target_int[batch_size:]
 
 # 留出一个batch进行验证
 valid_source = source_int[:batch_size]
