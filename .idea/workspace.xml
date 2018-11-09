@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69f12537-6c3d-43b1-a62a-ad07d70a14cd" name="Default" comment="" />
+    <list default="true" id="69f12537-6c3d-43b1-a62a-ad07d70a14cd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/data_loader.py" afterPath="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/data_loader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/dkn.py" afterPath="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/dkn.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +68,7 @@
       <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recommendation/Basic-DKN-Demo/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="128">
               <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -76,11 +80,21 @@
       <file leaf-file-name="dkn.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/recommendation/Basic-DKN-Demo/dkn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1307">
-              <caret line="19" column="56" lean-forward="false" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+            <state relative-caret-position="-529">
+              <caret line="48" column="8" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="49" selection-end-column="58" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendation/Basic-DKN-Demo/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,8 +112,8 @@
       <file leaf-file-name="data_loader.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recommendation/Basic-DKN-Demo/data_loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+            <state relative-caret-position="268">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -158,7 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/RL/Basic-DRQN-Demo/DRQN.py" />
         <option value="$PROJECT_DIR$/basic/multi-task-Demo/multi-task-alternate-training.py" />
         <option value="$PROJECT_DIR$/basic/multi-task-Demo/multi-task-joint-training.py" />
         <option value="$PROJECT_DIR$/recommendation/netease.py" />
@@ -205,9 +218,10 @@
         <option value="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/kg/Fast-TransX/transD/transD.cpp" />
         <option value="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/kg/Fast-TransX/transE/transE.cpp" />
         <option value="$PROJECT_DIR$/nlp/basic_seq2seq.py" />
-        <option value="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/data_loader.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/main.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/train.py" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/README.md" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/data_loader.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/dkn.py" />
       </list>
     </option>
@@ -261,6 +275,13 @@
               <item name="recommendation" type="462c0819:PsiDirectoryNode" />
               <item name="Basic-DKN-Demo" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
+              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
+              <item name="Basic-DKN-Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="kg" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -276,11 +297,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/recommendation/Basic-DKN-Demo" />
       <recent name="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/kg" />
       <recent name="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/news" />
       <recent name="$PROJECT_DIR$/recommendation/Basic-Meta-Graph-Demo/data" />
       <recent name="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/source_code" />
-      <recent name="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/data" />
@@ -444,7 +465,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43168077" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43168077" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39782345" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -490,13 +511,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CV/CNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="83" column="23" lean-forward="false" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIEN-Demo.py" />
     <entry file="file://$PROJECT_DIR$/CV/ResNet/resnet_mnist.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -811,10 +825,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/framework/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="773" column="0" lean-forward="false" selection-start-line="773" selection-start-column="0" selection-end-line="773" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DKN-Demo/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/Basic-DKN-Demo/data_loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+        <state relative-caret-position="268">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -823,7 +853,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/Basic-DKN-Demo/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="128">
           <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -841,18 +871,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/framework/ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="773" column="0" lean-forward="false" selection-start-line="773" selection-start-column="0" selection-end-line="773" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/Basic-DKN-Demo/dkn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1307">
-          <caret line="19" column="56" lean-forward="false" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+        <state relative-caret-position="-529">
+          <caret line="48" column="8" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="49" selection-end-column="58" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
