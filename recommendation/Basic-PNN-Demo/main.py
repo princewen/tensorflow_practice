@@ -55,21 +55,13 @@ def run_base_model_pnn(dfTrain,dfTest,folds,pnn_params):
 
 
     _get = lambda x,l:[x[i] for i in l]
-
-
-
+    	
     for i, (train_idx, valid_idx) in enumerate(folds):
         Xi_train_, Xv_train_, y_train_ = _get(Xi_train, train_idx), _get(Xv_train, train_idx), _get(y_train, train_idx)
         Xi_valid_, Xv_valid_, y_valid_ = _get(Xi_train, valid_idx), _get(Xv_train, valid_idx), _get(y_train, valid_idx)
 
         pnn = PNN(**pnn_params)
         pnn.fit(Xi_train_, Xv_train_, y_train_, Xi_valid_, Xv_valid_, y_valid_)
-
-
-
-
-
-
 
 pnn_params = {
     "embedding_size":8,

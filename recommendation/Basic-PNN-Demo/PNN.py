@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import numpy as np
 import tensorflow as tf
 
@@ -6,7 +9,6 @@ from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.metrics import roc_auc_score
 
 class PNN(BaseEstimator, TransformerMixin):
-
     def __init__(self, feature_size, field_size,
                  embedding_size=8,
                  deep_layers=[32, 32], deep_init_size = 50,
@@ -17,7 +19,7 @@ class PNN(BaseEstimator, TransformerMixin):
                  batch_norm=0, batch_norm_decay=0.995,
                  verbose=False, random_seed=2016,
                  loss_type="logloss", eval_metric=roc_auc_score,
-                greater_is_better=True,
+                 greater_is_better=True,
                  use_inner=True):
         assert loss_type in ["logloss", "mse"], \
             "loss_type can be either 'logloss' for classification task or 'mse' for regression task"
@@ -71,44 +73,53 @@ class PNN(BaseEstimator, TransformerMixin):
             # Embeddings
             self.embeddings = tf.nn.embedding_lookup(self.weights['feature_embeddings'],self.feat_index) # N * F * K
             feat_value = tf.reshape(self.feat_value,shape=[-1,self.field_size,1])
-            self.embeddings = tf.multiply(self.embeddings,feat_value) # N * F * K
-
+            self.embeddings = tf.multiply(self.embeddings, feat_value) # N * F * K  (?, 39, 8)
 
             # Linear Singal
             linear_output = []
-            for i in range(self.deep_init_size):
-                linear_output.append(tf.reshape(
-                    tf.reduce_sum(tf.multiply(self.embeddings,self.weights['product-linear'][i]),axis=[1,2]),shape=(-1,1)))# N * 1
-
-            self.lz = tf.concat(linear_output,axis=1) # N * init_deep_size
+            for i in range(self.deep_init_size):  # deep_init_size = 50
+                         # multiply是对应的元素相乘，最后输出和self.embeddings大小一样，tf.reduce_sum后，成1维数组，
+                         # tf.reshape成(?, 1)，用于后续操作
+                         # self.weights['product-linear'] [self.deep_init_size 50, self.field_size 39, self.embedding_size 8]
+                linear_output.append( tf.reshape( tf.reduce_sum( tf.multiply(self.embeddings, self.weights['product-linear'][i]), #(?, 39, 8)
+                                                                 axis=[1,2]),   # tf.reduce_sum (?)
+                                                  shape=(-1,1)))# N * 1         # tf.reshape    (?, 1)
+            self.lz = tf.concat(linear_output, axis=1) # N * init_deep_size (?, 50)
 
             # Quardatic Singal
             quadratic_output = []
-            if self.use_inner:
-                for i in range(self.deep_init_size):
-                    theta = tf.multiply(self.embeddings,tf.reshape(self.weights['product-quadratic-inner'][i],(1,-1,1))) # N * F * K
-                    quadratic_output.append(tf.reshape(tf.norm(tf.reduce_sum(theta,axis=1),axis=1),shape=(-1,1))) # N * 1
-
+            if self.use_inner: # False
+                for i in range(self.deep_init_size):  # deep_init_size = 50, [self.deep_init_size 50, self.field_size 39]
+                                                      #   tf.reshape: (1, 39, 1)  theta: (?, 39, 8)
+                    theta = tf.multiply(self.embeddings,      #             (?, 39, 8)
+                                        tf.reshape(self.weights['product-quadratic-inner'][i], # [self.deep_init_size 50, self.field_size 39]
+                                                   (1,-1,1))) # tf.reshape: (1, 39, 1) tf.multiply结果  (?, 39, 8)  N * F * K
+                                                      #  tf.reduce_sum(theta, axis=1): (?, 8)
+                                                      #  tf.norm(): 一维数组(?,)   tf.reshape(): (?, 1)
+                    quadratic_output.append(tf.reshape(tf.norm(tf.reduce_sum(theta, axis=1), axis=1), shape=(-1,1))) # N * 1
             else:
-                embedding_sum = tf.reduce_sum(self.embeddings,axis=1)
-                p = tf.matmul(tf.expand_dims(embedding_sum,2),tf.expand_dims(embedding_sum,1)) # N * K * K
-                for i in range(self.deep_init_size):
-                    theta = tf.multiply(p,tf.expand_dims(self.weights['product-quadratic-outer'][i],0)) # N * K * K
-                    quadratic_output.append(tf.reshape(tf.reduce_sum(theta,axis=[1,2]),shape=(-1,1))) # N * 1
+                embedding_sum = tf.reduce_sum(self.embeddings, axis=1)  # 按位求和 (?, 8)  
+                                                                        # p计算： (?, 8, 1)   (?, 1, 8)  =  (?, 8, 8)
+                p = tf.matmul(tf.expand_dims(embedding_sum, 2), tf.expand_dims(embedding_sum, 1)) # N * K * K
+                for i in range(self.deep_init_size):  # deep_init_size = 50
+                    # self.weights['product-quadratic-outer'] [ self.deep_init_size 50, self.embedding_size 8, self.embedding_size 8]
+                    #                p (?, 8, 8) * tf.expand_dims (1, 8, 8) = theta (?, 8, 8) tf.expand_dims把(8, 8)变成(1, 8, 8)
+                    theta = tf.multiply(p, tf.expand_dims(self.weights['product-quadratic-outer'][i],0)) # N * K * K
+                    
+                    # (?, 8, 8)经过tf.reduce_sum后，成1维数组(?,)，tf.reshape成(?, 1)，用于后续操作，
+                    # 和Linear Singal的(?, 39, 8)到(?, 1)类似
+                    quadratic_output.append(tf.reshape(tf.reduce_sum(theta,axis=[1,2]), shape=(-1,1))) # N * 1
 
-            self.lp = tf.concat(quadratic_output,axis=1) # N * init_deep_size
+            self.lp = tf.concat(quadratic_output, axis=1)  # N * init_deep_size
 
-            self.y_deep = tf.nn.relu(tf.add(tf.add(self.lz, self.lp), self.weights['product-bias']))
+            self.y_deep = tf.nn.relu(tf.add(tf.add(self.lz, self.lp), self.weights['product-bias'])) #都是add，[self.deep_init_size = 50,]
             self.y_deep = tf.nn.dropout(self.y_deep, self.dropout_keep_deep[0])
-
 
             # Deep component
             for i in range(0,len(self.deep_layers)):
-                self.y_deep = tf.add(tf.matmul(self.y_deep,self.weights["layer_%d" %i]), self.weights["bias_%d"%i])
-                self.y_deep = self.deep_layers_activation(self.y_deep)
+                self.y_deep = tf.add(tf.matmul(self.y_deep, self.weights["layer_%d" %i]), self.weights["bias_%d"%i])
+                self.y_deep = self.deep_layers_activation(self.y_deep)  # deep_layers_activation: relu
                 self.y_deep = tf.nn.dropout(self.y_deep,self.dropout_keep_deep[i+1])
-
-
 
             self.out = tf.add(tf.matmul(self.y_deep,self.weights['output']),self.weights['output_bias'])
 
@@ -118,8 +129,6 @@ class PNN(BaseEstimator, TransformerMixin):
                 self.loss = tf.losses.log_loss(self.label, self.out)
             elif self.loss_type == "mse":
                 self.loss = tf.nn.l2_loss(tf.subtract(self.label, self.out))
-
-
 
             if self.optimizer_type == "adam":
                 self.optimizer = tf.train.AdamOptimizer(learning_rate=self.learning_rate, beta1=0.9, beta2=0.999,
@@ -132,7 +141,6 @@ class PNN(BaseEstimator, TransformerMixin):
             elif self.optimizer_type == "momentum":
                 self.optimizer = tf.train.MomentumOptimizer(learning_rate=self.learning_rate, momentum=0.95).minimize(
                     self.loss)
-
 
             #init
             self.saver = tf.train.Saver()
@@ -151,10 +159,6 @@ class PNN(BaseEstimator, TransformerMixin):
             if self.verbose > 0:
                 print("#params: %d" % total_parameters)
 
-
-
-
-
     def _initialize_weights(self):
         weights = dict()
 
@@ -172,9 +176,7 @@ class PNN(BaseEstimator, TransformerMixin):
             weights['product-quadratic-outer'] = tf.Variable(
                 tf.random_normal([self.deep_init_size, self.embedding_size,self.embedding_size], 0.0, 0.01))
 
-
-
-        weights['product-linear'] = tf.Variable(tf.random_normal([self.deep_init_size,self.field_size,self.embedding_size],0.0,0.01))
+        weights['product-linear'] = tf.Variable(tf.random_normal([self.deep_init_size, self.field_size, self.embedding_size],0.0,0.01))
         weights['product-bias'] = tf.Variable(tf.random_normal([self.deep_init_size,],0,0,1.0))
         #deep layers
         num_layer = len(self.deep_layers)
@@ -203,9 +205,7 @@ class PNN(BaseEstimator, TransformerMixin):
         weights['output'] = tf.Variable(np.random.normal(loc=0,scale=glorot,size=(self.deep_layers[-1],1)),dtype=np.float32)
         weights['output_bias'] = tf.Variable(tf.constant(0.01),dtype=np.float32)
 
-
         return weights
-
 
     def get_batch(self,Xi,Xv,y,batch_size,index):
         start = index * batch_size
@@ -282,17 +282,51 @@ class PNN(BaseEstimator, TransformerMixin):
                 loss = self.predict(Xi_valid, Xv_valid, y_valid)
                 print("epoch",epoch,"loss",loss)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#import tensorflow as tf
+#import numpy as np
+#
+#embeddings=tf.convert_to_tensor(np.random.rand(3,39,8))
+#embsum = tf.reduce_sum(embeddings, axis=1)
+#embsume2 = tf.expand_dims(embsum, 2)
+#embsume1 = tf.expand_dims(embsum, 1)
+#p = tf.matmul(embsume2, embsume1)
+#
+#quadraticouter=tf.convert_to_tensor(np.random.rand(3,8,8))
+#quadraticouterex=tf.expand_dims(quadraticouter[0],0)
+#theta = tf.multiply(p, quadraticouterex)
+#thetared = tf.reduce_sum(theta,axis=[1,2])
+#thetaredre = tf.reshape(thetared,shape=(-1,1))
+#
+#with tf.Session() as sess:
+#  embsumout, embsume2out, embsume1out, pout, quadraticouterexout, thetaout, thetaredout, thetaredreout=sess.run([embsum, embsume2, embsume1, p, quadraticouterex, theta, thetared, thetaredre])
+#  
+#embsumout.shape
+#embsume2out.shape
+#embsume1out.shape
+#pout.shape
+#quadraticouterexout.shape
+#thetaout.shape
+#thetaredout.shape
+#thetaredreout.shape
+#
+#quadraticinner=tf.convert_to_tensor(np.random.rand(3,39))
+#quadraticinnerreshape=tf.reshape(quadraticinner[1], (1,-1,1))
+#thetainner = tf.multiply(embeddings, quadraticinnerreshape)
+#
+#with tf.Session() as sess:
+#  quadraticinnerout, quadraticinnerreshapeout, thetainnerout=sess.run([quadraticinner, quadraticinnerreshape, thetainner])
+#
+#quadraticinnerout.shape
+#quadraticinnerreshapeout.shape
+#thetainnerout.shape
+#
+#
+#thetainnerrsum=tf.reduce_sum(thetainner,axis=1)
+#thetainnerrsumnorm=tf.norm(thetainnerrsum, axis=1)
+#thetainnerrsumnormreshape=tf.reshape(thetainnerrsumnorm, shape=(-1,1))
+#with tf.Session() as sess:
+#  thetainnerrsumout, thetainnerrsumnormout, thetainnerrsumnormreshapeout=sess.run([thetainnerrsum, thetainnerrsumnorm, thetainnerrsumnormreshape])
+#
+#thetainnerrsumout.shape
+#thetainnerrsumnormout.shape
+#thetainnerrsumnormreshapeout.shape
