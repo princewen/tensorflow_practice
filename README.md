@@ -103,6 +103,15 @@ Tensroflow练习
 [推荐系统遇上深度学习(十六)--详解推荐系统中的常用评测指标<br>](https://www.jianshu.com/p/665f9f168eff)
 [推荐系统遇上深度学习(十七)--探秘阿里之MLR算法浅析及实现<br>](https://www.jianshu.com/p/627fc0d755b2)
 [推荐系统遇上深度学习(十八)--探秘阿里之深度兴趣网络(DIN)浅析及实现<br>](https://www.jianshu.com/p/73b6f5d00f46)
+[推荐系统遇上深度学习(十九)--探秘阿里之完整空间多任务模型ESSM<br>](https://www.jianshu.com/p/35f00299c059)
+[推荐系统遇上深度学习(二十)--贝叶斯个性化排序(BPR)算法原理及实战<br>](https://www.jianshu.com/p/ba1936ee0b69)
+[推荐系统遇上深度学习(二十一)--阶段性回顾<br>](https://www.jianshu.com/p/99e8f24ec7df)
+[推荐系统遇上深度学习(二十二)--DeepFM升级版XDeepFM模型强势来袭！<br>](https://www.jianshu.com/p/b4128bc79df0)
+[推荐系统遇上深度学习(二十三)--大一统信息检索模型IRGAN在推荐领域的应用<br>](https://www.jianshu.com/p/d151b52e57f9)
+[推荐系统遇上深度学习(二十四)--深度兴趣进化网络DIEN原理及实战！<br>](https://www.jianshu.com/p/6742d10b89a8)
+[推荐系统遇上深度学习(二十五)--当知识图谱遇上个性化推荐<br>](https://www.jianshu.com/p/6a5e796499e8)
+[推荐系统遇上深度学习(二十六)--知识图谱与推荐系统结合之DKN模型原理及实现<br>](https://www.jianshu.com/p/2e3cade31098)
+[推荐系统遇上深度学习(二十七)--知识图谱与推荐系统结合之RippleNet模型原理及实现<br>](https://www.jianshu.com/p/c5ffaf7ed449)
 <br>
 5、GAN<br>
 [听说GAN很高大上，其实就这么简单<br>](https://www.jianshu.com/p/5f638f493b7a)
