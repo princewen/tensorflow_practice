@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import numpy as np
 import tensorflow as tf
 
@@ -5,7 +8,7 @@ from time import time
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.metrics import roc_auc_score
 
-class AFM(BaseEstimator, TransformerMixin):
+class NFM(BaseEstimator, TransformerMixin):
 
     def __init__(self, feature_size, field_size,
                  embedding_size=8,
@@ -71,16 +74,15 @@ class AFM(BaseEstimator, TransformerMixin):
             # Embeddings
             self.embeddings = tf.nn.embedding_lookup(self.weights['feature_embeddings'],self.feat_index) # N * F * K
             feat_value = tf.reshape(self.feat_value,shape=[-1,self.field_size,1])
-            self.embeddings = tf.multiply(self.embeddings,feat_value) # N * F * K
+            self.embeddings = tf.multiply(self.embeddings, feat_value) # N * F * K
 
             # first order term
             self.y_first_order = tf.nn.embedding_lookup(self.weights['feature_bias'], self.feat_index)
             self.y_first_order = tf.reduce_sum(tf.multiply(self.y_first_order, feat_value), 2)
 
-
             # second order term
             # sum-square-part
-            self.summed_features_emb = tf.reduce_sum(self.embeddings, 1)  # None * k
+            self.summed_features_emb = tf.reduce_sum(self.embeddings, 1)  # None * K
             self.summed_features_emb_square = tf.square(self.summed_features_emb)  # None * K
 
             # squre-sum-part
@@ -91,7 +93,8 @@ class AFM(BaseEstimator, TransformerMixin):
             self.y_second_order = 0.5 * tf.subtract(self.summed_features_emb_square, self.squared_sum_features_emb)
 
             # Deep component
-            self.y_deep = self.y_second_order
+            # Bi-Interaction Layer输出进DNN
+            self.y_deep = self.y_second_order  # (?, 8) 8就算Embedding的大小
             for i in range(0, len(self.deep_layers)):
                 self.y_deep = tf.add(tf.matmul(self.y_deep, self.weights["layer_%d" % i]), self.weights["bias_%d" % i])
                 self.y_deep = self.deep_layers_activation(self.y_deep)
@@ -100,8 +103,10 @@ class AFM(BaseEstimator, TransformerMixin):
             # bias
             self.y_bias = self.weights['bias'] * tf.ones_like(self.label)
 
-
             # out
+            print('y_first_order %s'%str(self.y_first_order))
+            print('y_deep %s'%str(self.y_deep))
+            #self.y_first_order (?, 39)  y_deep (?, 32) deep_layers=[32, 32]
             self.out = tf.add_n([tf.reduce_sum(self.y_first_order,axis=1,keep_dims=True),
                                  tf.reduce_sum(self.y_deep,axis=1,keep_dims=True),
                                  self.y_bias])
@@ -112,8 +117,6 @@ class AFM(BaseEstimator, TransformerMixin):
                 self.loss = tf.losses.log_loss(self.label, self.out)
             elif self.loss_type == "mse":
                 self.loss = tf.nn.l2_loss(tf.subtract(self.label, self.out))
-
-
 
             if self.optimizer_type == "adam":
                 self.optimizer = tf.train.AdamOptimizer(learning_rate=self.learning_rate, beta1=0.9, beta2=0.999,
@@ -126,7 +129,6 @@ class AFM(BaseEstimator, TransformerMixin):
             elif self.optimizer_type == "momentum":
                 self.optimizer = tf.train.MomentumOptimizer(learning_rate=self.learning_rate, momentum=0.95).minimize(
                     self.loss)
-
 
             #init
             self.saver = tf.train.Saver()
@@ -144,9 +146,6 @@ class AFM(BaseEstimator, TransformerMixin):
                 total_parameters += variable_parameters
             if self.verbose > 0:
                 print("#params: %d" % total_parameters)
-
-
-
 
 
     def _initialize_weights(self):
