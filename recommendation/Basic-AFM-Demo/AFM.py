@@ -69,8 +69,10 @@ class AFM(BaseEstimator, TransformerMixin):
 
             self.weights = self._initialize_weights()
 
+            # Batch Size：N  Field Size (这里是field size不是feature size！）：F   Embedding Size：K  Attention Size ：A
+
             # Embeddings
-            self.embeddings = tf.nn.embedding_lookup(self.weights['feature_embeddings'],self.feat_index) # N * F * K
+            self.embeddings = tf.nn.embedding_lookup(self.weights['feature_embeddings'], self.feat_index) # N * F * K
             feat_value = tf.reshape(self.feat_value,shape=[-1,self.field_size,1])
             self.embeddings = tf.multiply(self.embeddings,feat_value) # N * F * K
 
