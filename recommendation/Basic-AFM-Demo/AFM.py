@@ -12,7 +12,7 @@ class AFM(BaseEstimator, TransformerMixin):
                  deep_layers=[32, 32], deep_init_size = 50,
                  dropout_deep=[0.5, 0.5, 0.5],
                  deep_layer_activation=tf.nn.relu,
-                 epoch=10, batch_size=256,
+                 epoch=10, batch_size=16, #256,
                  learning_rate=0.001, optimizer="adam",
                  batch_norm=0, batch_norm_decay=0.995,
                  verbose=False, random_seed=2016,
@@ -56,24 +56,19 @@ class AFM(BaseEstimator, TransformerMixin):
         with self.graph.as_default():
             tf.set_random_seed(self.random_seed)
 
-            self.feat_index = tf.placeholder(tf.int32,
-                                             shape=[None,None],
-                                             name='feat_index')
-            self.feat_value = tf.placeholder(tf.float32,
-                                           shape=[None,None],
-                                           name='feat_value')
+            self.feat_index = tf.placeholder(tf.int32, shape=[None,None], name='feat_index')
+            self.feat_value = tf.placeholder(tf.float32, shape=[None,None], name='feat_value')
 
-            self.label = tf.placeholder(tf.float32,shape=[None,1],name='label')
-            self.dropout_keep_deep = tf.placeholder(tf.float32,shape=[None],name='dropout_deep_deep')
-            self.train_phase = tf.placeholder(tf.bool,name='train_phase')
+            self.label = tf.placeholder(tf.float32,shape=[None,1], name='label')
+            self.dropout_keep_deep = tf.placeholder(tf.float32,shape=[None], name='dropout_deep_deep')
+            self.train_phase = tf.placeholder(tf.bool, name='train_phase')
 
             self.weights = self._initialize_weights()
 
             # Embeddings
-            self.embeddings = tf.nn.embedding_lookup(self.weights['feature_embeddings'],self.feat_index) # N * F * K
-            feat_value = tf.reshape(self.feat_value,shape=[-1,self.field_size,1])
-            self.embeddings = tf.multiply(self.embeddings,feat_value) # N * F * K
-
+            self.embeddings = tf.nn.embedding_lookup(self.weights['feature_embeddings'], self.feat_index) # N * F * K
+            feat_value = tf.reshape(self.feat_value,shape=[-1, self.field_size, 1])
+            self.embeddings = tf.multiply(self.embeddings, feat_value) # N * F * K
 
             # element_wise
             element_wise_product_list = []

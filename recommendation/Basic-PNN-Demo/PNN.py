@@ -95,7 +95,7 @@ class PNN(BaseEstimator, TransformerMixin):
                                         tf.reshape(self.weights['product-quadratic-inner'][i], # [self.deep_init_size 50, self.field_size 39]
                                                    (1,-1,1))) # tf.reshape: (1, 39, 1) tf.multiply结果  (?, 39, 8)  N * F * K
                                                       #  tf.reduce_sum(theta, axis=1): (?, 8)
-                                                      #  tf.norm(): 一维数组(?,)   tf.reshape(): (?, 1)
+                                                      #  tf.norm(): 一维数组，求范数，为正(?,)   tf.reshape(): (?, 1)
                     quadratic_output.append(tf.reshape(tf.norm(tf.reduce_sum(theta, axis=1), axis=1), shape=(-1,1))) # N * 1
             else:
                 embedding_sum = tf.reduce_sum(self.embeddings, axis=1)  # 按位求和 (?, 8)  
