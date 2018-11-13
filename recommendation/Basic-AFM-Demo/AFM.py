@@ -73,23 +73,25 @@ class AFM(BaseEstimator, TransformerMixin):
 
             # Embeddings
             self.embeddings = tf.nn.embedding_lookup(self.weights['feature_embeddings'], self.feat_index) # N * F * K
-            feat_value = tf.reshape(self.feat_value,shape=[-1,self.field_size,1])
-            self.embeddings = tf.multiply(self.embeddings,feat_value) # N * F * K
+            feat_value = tf.reshape(self.feat_value, shape=[-1,self.field_size,1])
+            self.embeddings = tf.multiply(self.embeddings, feat_value) # N * F * K
 
 
             # element_wise
             element_wise_product_list = []
-            for i in range(self.field_size):
-                for j in range(i+1,self.field_size):
+            for i in range(self.field_size): # self.field_size: 39
+                for j in range(i+1,self.field_size):      # self.embeddings (?, 39, 8)
                     element_wise_product_list.append(tf.multiply(self.embeddings[:,i,:],self.embeddings[:,j,:])) # None * K
 
-            self.element_wise_product = tf.stack(element_wise_product_list) # (F * F - 1 / 2) * None * K
-            self.element_wise_product = tf.transpose(self.element_wise_product,perm=[1,0,2],name='element_wise_product') # None * (F * F - 1 / 2) *  K
+            # 输入 len(element_wise_product_list): 741   元素: (?, 8)
+            self.element_wise_product = tf.stack(element_wise_product_list) # (F * (F - 1) / 2) * None * K
+            self.element_wise_product = tf.transpose(self.element_wise_product,perm=[1,0,2],name='element_wise_product')
+                # None * (F * (F - 1) / 2) *  K  = (?, 741, 8)
 
             #self.interaction
 
             # attention part
-            num_interactions = int(self.field_size * (self.field_size - 1) / 2)
+            num_interactions = int(self.field_size * (self.field_size - 1) / 2)  #  num_interactions: 741
             # wx+b -> relu(wx+b) -> h*relu(wx+b)
             self.attention_wx_plus_b = tf.reshape(tf.add(tf.matmul(tf.reshape(self.element_wise_product,shape=(-1,self.embedding_size)),
                                                                    self.weights['attention_w']),
