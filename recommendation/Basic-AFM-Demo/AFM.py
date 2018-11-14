@@ -93,24 +93,23 @@ class AFM(BaseEstimator, TransformerMixin):
             # attention part
             num_interactions = int(self.field_size * (self.field_size - 1) / 2)  #  num_interactions: 741
             # wx+b -> relu(wx+b) -> h*relu(wx+b)
-            self.attention_wx_plus_b = tf.reshape(tf.add(tf.matmul(tf.reshape(self.element_wise_product,shape=(-1,self.embedding_size)),
-                                                                   self.weights['attention_w']),
-                                                         self.weights['attention_b']),
-                                                  shape=[-1,num_interactions,self.attention_size]) # N * ( F * F - 1 / 2) * A
+            self.attention_wx_plus_b = tf.reshape(tf.add(tf.matmul(tf.reshape(self.element_wise_product, shape=(-1, self.embedding_size)), # (?*741, 8)
+                                                                   self.weights['attention_w']), # (?*741, 10)
+                                                         self.weights['attention_b']),           # (?*741, 10)
+                                                  shape=[-1,num_interactions,self.attention_size]) # N * ( F * F - 1 / 2) * A (?, 741, 10)
 
             self.attention_exp = tf.exp(tf.reduce_sum(tf.multiply(tf.nn.relu(self.attention_wx_plus_b),
-                                                           self.weights['attention_h']),
-                                               axis=2,keep_dims=True)) # N * ( F * F - 1 / 2) * 1
+                                                                  self.weights['attention_h']), # self.weights['attention_h'] (10, )
+                                                      # tf.reduce_sum (?, 741, 10)  -> (?, 741, 1)
+                                                      axis=2, keep_dims=True)) # N * ( F * F - 1 / 2) * 1  (?, 741, 1)
 
-            self.attention_exp_sum = tf.reduce_sum(self.attention_exp,axis=1,keep_dims=True) # N * 1 * 1
+            self.attention_exp_sum = tf.reduce_sum(self.attention_exp, axis=1, keep_dims=True) # N * 1 * 1 (?, 1, 1)
 
-            self.attention_out = tf.div(self.attention_exp,self.attention_exp_sum,name='attention_out')  # N * ( F * F - 1 / 2) * 1
+            self.attention_out = tf.div(self.attention_exp, self.attention_exp_sum, name='attention_out')  # N * ( F * F - 1 / 2) * 1  (?, 741, 1)
 
-            self.attention_x_product = tf.reduce_sum(tf.multiply(self.attention_out,self.element_wise_product),axis=1,name='afm') # N * K
+            self.attention_x_product = tf.reduce_sum(tf.multiply(self.attention_out, self.element_wise_product),axis=1,name='afm') # N * K  (?, 8)
 
-            self.attention_part_sum = tf.matmul(self.attention_x_product,self.weights['attention_p']) # N * 1
-
-
+            self.attention_part_sum = tf.matmul(self.attention_x_product, self.weights['attention_p']) # N * 1  (?, 1)
 
             # first order term
             self.y_first_order = tf.nn.embedding_lookup(self.weights['feature_bias'], self.feat_index)
@@ -119,11 +118,10 @@ class AFM(BaseEstimator, TransformerMixin):
             # bias
             self.y_bias = self.weights['bias'] * tf.ones_like(self.label)
 
-
             # out
-            self.out = tf.add_n([tf.reduce_sum(self.y_first_order,axis=1,keep_dims=True),
+            self.out = tf.add_n([tf.reduce_sum(self.y_first_order, axis=1, keep_dims=True),
                                  self.attention_part_sum,
-                                 self.y_bias],name='out_afm')
+                                 self.y_bias], name='out_afm')
 
             # loss
             if self.loss_type == "logloss":
@@ -164,10 +162,6 @@ class AFM(BaseEstimator, TransformerMixin):
             if self.verbose > 0:
                 print("#params: %d" % total_parameters)
 
-
-
-
-
     def _initialize_weights(self):
         weights = dict()
 
@@ -194,7 +188,6 @@ class AFM(BaseEstimator, TransformerMixin):
         weights['attention_p'] = tf.Variable(np.ones((self.embedding_size,1)),dtype=np.float32)
 
         return weights
-
 
     def get_batch(self,Xi,Xv,y,batch_size,index):
         start = index * batch_size
@@ -258,17 +251,31 @@ class AFM(BaseEstimator, TransformerMixin):
                 loss = self.predict(Xi_valid, Xv_valid, y_valid)
                 print("epoch",epoch,"loss",loss)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#import tensorflow as tf
+#import numpy as np
+#
+#num_interactions=741
+#embedding_size=8
+#attention_size=10
+#element_wise_product=tf.convert_to_tensor(np.random.rand(3, num_interactions, embedding_size))
+#attention_w=tf.convert_to_tensor(np.random.rand(embedding_size, attention_size))
+#attention_b=tf.convert_to_tensor(np.random.rand(attention_size, ))
+#attention_h=tf.convert_to_tensor(np.random.rand(attention_size, ))
+#attention_p = tf.convert_to_tensor(np.ones((embedding_size,1)))
+#
+#element_wise_product_reshape=tf.reshape(element_wise_product, shape=(-1, embedding_size)) #(2223, 8)
+#element_wise_product_reshape_matmul=tf.matmul(element_wise_product_reshape, attention_w)  #(2223, 10)
+#element_wise_product_reshape_matmul_add=tf.add(element_wise_product_reshape_matmul, attention_b)
+#attention_wx_plus_b=tf.reshape(element_wise_product_reshape_matmul_add,  shape=[-1, num_interactions, attention_size])
+#
+#attention_wx_plus_b_multiply=tf.multiply(tf.nn.relu(attention_wx_plus_b),attention_h)
+#attention_wx_plus_b_multiply_red=tf.reduce_sum(attention_wx_plus_b_multiply, axis=2, keep_dims=True)
+#attention_exp = tf.exp(attention_wx_plus_b_multiply_red)
+#
+#attention_exp_sum = tf.reduce_sum(attention_exp, axis=1, keep_dims=True) # N * 1 * 1
+#attention_out = tf.div(attention_exp, attention_exp_sum, name='attention_out')  # N * ( F * F - 1 / 2) * 1
+#attention_x_product = tf.reduce_sum(tf.multiply(attention_out, element_wise_product), axis=1, name='afm') # N * K
+#attention_part_sum = tf.matmul(attention_x_product, attention_p) # N * 1
+#
+#with tf.Session() as sess:
+#  es, eo, xp, ps=sess.run([attention_exp_sum, attention_out, attention_x_product, attention_part_sum])
