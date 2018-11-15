@@ -4,10 +4,8 @@ from sklearn.metrics import roc_auc_score
 from data import get_data
 import pandas as pd
 
-
 x = tf.placeholder(tf.float32,shape=[None,108])
 y = tf.placeholder(tf.float32,shape=[None])
-
 
 m = 2
 learning_rate = 0.3
@@ -15,10 +13,10 @@ u = tf.Variable(tf.random_normal([108,m],0.0,0.5),name='u')
 w = tf.Variable(tf.random_normal([108,m],0.0,0.5),name='w')
 
 U = tf.matmul(x,u)
-p1 = tf.nn.softmax(U)
+p1 = tf.nn.softmax(U) # (?, m)
 
 W = tf.matmul(x,w)
-p2 = tf.nn.sigmoid(W)
+p2 = tf.nn.sigmoid(W) # (?, m)
 
 pred = tf.reduce_sum(tf.multiply(p1,p2),1)
 

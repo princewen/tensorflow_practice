@@ -56,12 +56,8 @@ class AFM(BaseEstimator, TransformerMixin):
         with self.graph.as_default():
             tf.set_random_seed(self.random_seed)
 
-            self.feat_index = tf.placeholder(tf.int32,
-                                             shape=[None,None],
-                                             name='feat_index')
-            self.feat_value = tf.placeholder(tf.float32,
-                                           shape=[None,None],
-                                           name='feat_value')
+            self.feat_index = tf.placeholder(tf.int32, shape=[None,None], name='feat_index')
+            self.feat_value = tf.placeholder(tf.float32, shape=[None,None], name='feat_value')
 
             self.label = tf.placeholder(tf.float32,shape=[None,1],name='label')
             self.dropout_keep_deep = tf.placeholder(tf.float32,shape=[None],name='dropout_deep_deep')
@@ -70,12 +66,10 @@ class AFM(BaseEstimator, TransformerMixin):
             self.weights = self._initialize_weights()
 
             # Batch Size：N  Field Size (这里是field size不是feature size！）：F   Embedding Size：K  Attention Size ：A
-
             # Embeddings
             self.embeddings = tf.nn.embedding_lookup(self.weights['feature_embeddings'], self.feat_index) # N * F * K
             feat_value = tf.reshape(self.feat_value, shape=[-1,self.field_size,1])
             self.embeddings = tf.multiply(self.embeddings, feat_value) # N * F * K
-
 
             # element_wise
             element_wise_product_list = []
@@ -107,7 +101,7 @@ class AFM(BaseEstimator, TransformerMixin):
 
             self.attention_out = tf.div(self.attention_exp, self.attention_exp_sum, name='attention_out')  # N * ( F * F - 1 / 2) * 1  (?, 741, 1)
 
-            self.attention_x_product = tf.reduce_sum(tf.multiply(self.attention_out, self.element_wise_product),axis=1,name='afm') # N * K  (?, 8)
+            self.attention_x_product = tf.reduce_sum(tf.multiply(self.attention_out, self.element_wise_product), axis=1, name='afm') # N * K  (?, 8)
 
             self.attention_part_sum = tf.matmul(self.attention_x_product, self.weights['attention_p']) # N * 1  (?, 1)
 
@@ -130,8 +124,6 @@ class AFM(BaseEstimator, TransformerMixin):
             elif self.loss_type == "mse":
                 self.loss = tf.nn.l2_loss(tf.subtract(self.label, self.out))
 
-
-
             if self.optimizer_type == "adam":
                 self.optimizer = tf.train.AdamOptimizer(learning_rate=self.learning_rate, beta1=0.9, beta2=0.999,
                                                         epsilon=1e-8).minimize(self.loss)
@@ -143,7 +135,6 @@ class AFM(BaseEstimator, TransformerMixin):
             elif self.optimizer_type == "momentum":
                 self.optimizer = tf.train.MomentumOptimizer(learning_rate=self.learning_rate, momentum=0.95).minimize(
                     self.loss)
-
 
             #init
             self.saver = tf.train.Saver()

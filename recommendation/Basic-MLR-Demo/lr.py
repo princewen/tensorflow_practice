@@ -4,15 +4,12 @@ from sklearn.metrics import roc_auc_score
 from data import get_data
 import pandas as pd
 
-
-
 x=tf.placeholder(tf.float32,shape=[None,108])
 y=tf.placeholder(tf.float32,shape=[None])
 
 m=1
 learning_rate=0.3
 w=tf.Variable(tf.random_normal([108,m], 0.0, 0.5),name='u')
-
 
 W=tf.matmul(x,w)
 p2=tf.reduce_sum(tf.nn.sigmoid(W),1)
@@ -23,7 +20,6 @@ cost1=tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=pred, labels
 
 cost=tf.add_n([cost1])
 train_op = tf.train.FtrlOptimizer(learning_rate).minimize(cost)
-
 
 init_op = tf.group(tf.global_variables_initializer(),tf.local_variables_initializer())
 sess = tf.Session()

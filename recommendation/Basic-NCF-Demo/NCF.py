@@ -86,7 +86,7 @@ class NCF(object):
             self.item_onehot = tf.one_hot(self.item,self.item_size,name='item_onehot')
 
         with tf.name_scope('embed'):
-            self.user_embed_GMF = tf.layers.dense(inputs = self.user_onehot,
+            self.user_embed_GMF = tf.layers.dense(inputs = self.user_onehot,  # activation(inputs * kernel + bias)
                                                   units = self.embed_size,
                                                   activation = self.activation_func,
                                                   kernel_initializer=self.initializer,
@@ -106,14 +106,13 @@ class NCF(object):
                                                   kernel_initializer=self.initializer,
                                                   kernel_regularizer=self.regularizer,
                                                   name='user_embed_MLP')
+
             self.item_embed_MLP = tf.layers.dense(inputs=self.item_onehot,
                                                   units=self.embed_size,
                                                   activation=self.activation_func,
                                                   kernel_initializer=self.initializer,
                                                   kernel_regularizer=self.regularizer,
                                                   name='item_embed_MLP')
-
-
 
         with tf.name_scope("GMF"):
             self.GMF = tf.multiply(self.user_embed_GMF,self.item_embed_GMF,name='GMF')
@@ -149,7 +148,6 @@ class NCF(object):
         with tf.name_scope('concatenation'):
             self.concatenation = tf.concat([self.GMF,self.layer3_MLP],axis=-1,name='concatenation')
 
-
             self.logits = tf.layers.dense(inputs= self.concatenation,
                                           units = 1,
                                           activation=None,
@@ -160,7 +158,6 @@ class NCF(object):
             self.logits_dense = tf.reshape(self.logits,[-1])
 
         with tf.name_scope("loss"):
-
             self.loss = tf.reduce_mean(self.loss_func(
                 labels=self.label, logits=self.logits_dense, name='loss'))
             # self.loss = tf.reduce_mean(self.loss_func(self.label, self.logits),
@@ -169,12 +166,10 @@ class NCF(object):
         with tf.name_scope("optimzation"):
             self.optimzer = self.optim.minimize(self.loss)
 
-
     def eval(self):
         with tf.name_scope("evaluation"):
             self.item_replica = self.item
             _, self.indice = tf.nn.top_k(tf.sigmoid(self.logits_dense), self.topk)
-
 
     def summary(self):
         """ Create summaries to write on tensorboard. """
@@ -183,9 +178,6 @@ class NCF(object):
             tf.summary.scalar('loss', self.loss)
             tf.summary.histogram('histogram loss', self.loss)
             self.summary_op = tf.summary.merge_all()
-
-
-
 
     def build(self):
         self.get_data()

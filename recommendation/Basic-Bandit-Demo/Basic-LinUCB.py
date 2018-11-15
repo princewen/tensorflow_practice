@@ -5,20 +5,17 @@ class LinUCB:
         self.alpha = 0.25
         self.r1 = 0.6
         self.r0 = -16
-        self.d = 6  # dimension of user features
-        self.Aa = {} # Aa : collection of matrix to compute disjoint part for each article a, d*d
-        self.AaI = {}  # AaI : store the inverse of all Aa matrix
+        self.d = 6    # dimension of user features
+        self.Aa = {}  # Aa : collection of matrix to compute disjoint part for each article a, d*d
+        self.AaI = {} # AaI : store the inverse of all Aa matrix
 
         self.ba = {}  # ba : collection of vectors to compute disjoin part, d*1
         self.theta = {}
 
         self.a_max = 0
 
-
-
         self.x = None
         self.xT = None
-
 
     def set_articles(self,art):
         for key in art:
@@ -27,8 +24,6 @@ class LinUCB:
 
             self.AaI[key] = np.identity(self.d)
             self.theta[key] = np.zeros((self.d,1))
-
-
 
     def update(self,reward):
         if reward == -1:
@@ -49,7 +44,7 @@ class LinUCB:
             pass
 
 
-    def recommend(self,timestamp,user_features,articles):
+    def recommend(self, timestamp, user_features, articles):
         xaT = np.array([user_features]) # d * 1
         xa = np.transpose(xaT)
 
@@ -63,11 +58,4 @@ class LinUCB:
         self.a_max = art_max
 
         return self.a_max
-
-
-
-
-
-
-
-
+        
