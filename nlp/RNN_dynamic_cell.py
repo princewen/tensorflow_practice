@@ -72,7 +72,7 @@ with tf.variable_scope("softmax"):
     b = tf.get_variable("b",[num_classes],initializer=tf.constant_initializer(0.0))
 
 
-logits = tf.reshape(tf.matmul(tf.reshape(rnn_outputs,[-1,batch_size]),W)+b,[batch_size,num_steps,num_classes])
+logits = tf.reshape(tf.matmul(tf.reshape(rnn_outputs,[-1,state_size]),W)+b,[batch_size,num_steps,num_classes])
 predictions = tf.nn.softmax(logits)
 
 losses = tf.nn.sparse_softmax_cross_entropy_with_logits(labels=y,logits=predictions)

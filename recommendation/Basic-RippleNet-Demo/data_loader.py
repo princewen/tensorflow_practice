@@ -14,7 +14,6 @@ def load_rating(args):
     rating_file = 'data/ratings_final.txt'
     rating_np = np.loadtxt(rating_file,dtype=np.int32)
 
-
     return dataset_split(rating_np)
 
 
