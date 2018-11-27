@@ -93,7 +93,7 @@ class MKR(object):
         self.tail_pred = tf.nn.sigmoid(self.tail_pred)
 
         self.scores_kge = tf.nn.sigmoid(tf.reduce_sum(self.tail_embeddings * self.tail_pred,axis=1))
-        self.rmse = tf.reduce_mean(tf.sqrt(tf.reduce_sum(tf.square(self.tail_embeddings - self.tail_pred),axis=1) / args.dim))
+        #self.rmse = tf.reduce_mean(tf.sqrt(tf.reduce_sum(tf.square(self.tail_embeddings - self.tail_pred),axis=1) / args.dim))
 
     def _build_loss(self, args):
         # RS
