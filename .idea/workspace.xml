@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69f12537-6c3d-43b1-a62a-ad07d70a14cd" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RL/Basic-Actor-Critic/Actor.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RL/Basic-Actor-Critic/Critic.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RL/Basic-Actor-Critic/run_CartPole.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendation/Basic-MKR-Demo/model.py" afterPath="$PROJECT_DIR$/recommendation/Basic-MKR-Demo/model.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,13 +17,16 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/tensorflow1_2$lr.coverage" NAME="lr Coverage Results" MODIFIED="1529722387251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-MLR-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$preprocess.coverage" NAME="preprocess Coverage Results" MODIFIED="1541940517652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-RippleNet-Demo" />
-    <SUITE FILE_PATH="coverage/tensorflow1_2$simple_PPO.coverage" NAME="simple-PPO Coverage Results" MODIFIED="1543307380001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RL/Basic-PPO-Demo" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$simple_PPO.coverage" NAME="simple-PPO Coverage Results" MODIFIED="1543323533617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RL/Basic-PPO-Demo" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$AC.coverage" NAME="AC Coverage Results" MODIFIED="1543476496900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RL/Basic-AC-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$multi_task_joint_training.coverage" NAME="multi-task-joint-training Coverage Results" MODIFIED="1533110252951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/basic/multi-task-Demo" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$run_CartPole.coverage" NAME="run_CartPole Coverage Results" MODIFIED="1543383921818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RL/Basic-Actor-Critic" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$BPR.coverage" NAME="BPR Coverage Results" MODIFIED="1530202420711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-BPR-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$main.coverage" NAME="main Coverage Results" MODIFIED="1541655400725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-DKN-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$tf_data_demo.coverage" NAME="tf_data_demo Coverage Results" MODIFIED="1528181619719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-NCF-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$multi_task_alternate_training.coverage" NAME="multi-task-alternate-training Coverage Results" MODIFIED="1533109405226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/basic/multi-task-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$zhihu2.coverage" NAME="zhihu2 Coverage Results" MODIFIED="1535979949880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$A2C.coverage" NAME="A2C Coverage Results" MODIFIED="1543473224673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RL/Basic-A2C-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1541947722414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-RippleNet-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$preprocess__1_.coverage" NAME="preprocess (1) Coverage Results" MODIFIED="1542602954609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-MKR-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$kg_preprocess.coverage" NAME="kg_preprocess Coverage Results" MODIFIED="1541604856562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/kg" />
@@ -37,6 +42,7 @@
     <SUITE FILE_PATH="coverage/tensorflow1_2$NDCG.coverage" NAME="NDCG Coverage Results" MODIFIED="1529307976227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-Evaluation-metrics" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$cf_gan.coverage" NAME="cf_gan Coverage Results" MODIFIED="1537765219138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$data_loader.coverage" NAME="data_loader Coverage Results" MODIFIED="1541647709452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-DKN-Demo" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$A3C.coverage" NAME="A3C Coverage Results" MODIFIED="1543473195998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RL/Basic-A3C-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$tf_practice.coverage" NAME="tf_practice Coverage Results" MODIFIED="1537593989869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/test_some_code" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$prepare_data_for_transx.coverage" NAME="prepare_data_for_transx Coverage Results" MODIFIED="1541603869565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/kg" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1542614921574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-MKR-Demo" />
@@ -45,11 +51,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="model.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommendation/Basic-MKR-Demo/model.py">
+      <file leaf-file-name="A2C.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RL/Basic-A2C-Demo/A2C.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+            <state relative-caret-position="1005">
+              <caret line="67" column="50" lean-forward="false" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -57,43 +63,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="simple-PPO.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/RL/Basic-PPO-Demo/simple-PPO.py">
+      <file leaf-file-name="AC.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RL/Basic-AC-Demo/AC.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="72" column="90" lean-forward="false" selection-start-line="72" selection-start-column="90" selection-end-line="72" selection-end-column="90" />
+            <state relative-caret-position="763">
+              <caret line="51" column="72" lean-forward="true" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
               <folding>
-                <element signature="e#0#23#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommendation/Basic-MKR-Demo/layers.py">
+      <file leaf-file-name="A3C.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RL/Basic-A3C-Demo/A3C.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="89" column="32" lean-forward="false" selection-start-line="70" selection-start-column="8" selection-end-line="89" selection-end-column="32" />
+            <state relative-caret-position="259">
+              <caret line="57" column="44" lean-forward="false" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RL_brain.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RL/Basic-Policy-Network/RL_brain.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data_loader.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommendation/Basic-MKR-Demo/data_loader.py">
+      <file leaf-file-name="run_CartPole.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RL/Basic-Policy-Network/run_CartPole.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            <state relative-caret-position="210">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommendation/Basic-MKR-Demo/train.py">
+      <file leaf-file-name="session.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/client/session.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1142">
-              <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+            <state relative-caret-position="181">
+              <caret line="1095" column="0" lean-forward="false" selection-start-line="1095" selection-start-column="0" selection-end-line="1095" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -121,6 +139,7 @@
       <find>&quot;Abstract method&quot;</find>
       <find>print</find>
       <find>new_words</find>
+      <find>one_hot</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,10 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/src/base_model.py" />
-        <option value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/config/network.yaml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/test_some_code/tf_practice.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/src/exDeepFM.py" />
         <option value="$PROJECT_DIR$/basic/maxout.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo/utils.py" />
@@ -181,6 +196,10 @@
         <option value="$PROJECT_DIR$/recommendation/Basic-MKR-Demo/layers.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-MKR-Demo/model.py" />
         <option value="$PROJECT_DIR$/RL/Basic-PPO-Demo/simple-PPO.py" />
+        <option value="$PROJECT_DIR$/RL/Basic-AC-Demo.py" />
+        <option value="$PROJECT_DIR$/RL/Basic-A2C-Demo/A2C.py" />
+        <option value="$PROJECT_DIR$/RL/Basic-A3C-Demo/A3C.py" />
+        <option value="$PROJECT_DIR$/RL/Basic-AC-Demo/AC.py" />
       </list>
     </option>
   </component>
@@ -220,6 +239,36 @@
               <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
               <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
               <item name="RL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
+              <item name="RL" type="462c0819:PsiDirectoryNode" />
+              <item name="Basic-A2C-Demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
+              <item name="RL" type="462c0819:PsiDirectoryNode" />
+              <item name="Basic-A3C-Demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
+              <item name="RL" type="462c0819:PsiDirectoryNode" />
+              <item name="Basic-AC-Demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
+              <item name="RL" type="462c0819:PsiDirectoryNode" />
+              <item name="Basic-Policy-Network" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
+              <item name="RL" type="462c0819:PsiDirectoryNode" />
+              <item name="DQN-demo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -263,75 +312,75 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.simple-PPO">
-    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.AC">
+    <configuration name="A2C" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recommendation/Basic-RippleNet-Demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RL/Basic-A2C-Demo" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tensorflow1.2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recommendation/Basic-RippleNet-Demo/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RL/Basic-A2C-Demo/A2C.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="A3C" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recommendation/Basic-MKR-Demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RL/Basic-A3C-Demo" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tensorflow1.2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recommendation/Basic-MKR-Demo/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RL/Basic-A3C-Demo/A3C.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="preprocess (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="AC" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recommendation/Basic-MKR-Demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RL/Basic-AC-Demo" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tensorflow1.2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recommendation/Basic-MKR-Demo/preprocess.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RL/Basic-AC-Demo/AC.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="run_CartPole" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recommendation/Basic-RippleNet-Demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RL/Basic-Actor-Critic" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tensorflow1.2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recommendation/Basic-RippleNet-Demo/preprocess.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RL/Basic-Actor-Critic/run_CartPole.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -355,19 +404,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.preprocess" />
-      <item index="1" class="java.lang.String" itemvalue="Python.main (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.preprocess (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.main (2)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.simple-PPO" />
+      <item index="0" class="java.lang.String" itemvalue="Python.simple-PPO" />
+      <item index="1" class="java.lang.String" itemvalue="Python.run_CartPole" />
+      <item index="2" class="java.lang.String" itemvalue="Python.A2C" />
+      <item index="3" class="java.lang.String" itemvalue="Python.A3C" />
+      <item index="4" class="java.lang.String" itemvalue="Python.AC" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.simple-PPO" />
-        <item index="1" class="java.lang.String" itemvalue="Python.main (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.preprocess (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.main (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Python.preprocess" />
+        <item index="0" class="java.lang.String" itemvalue="Python.AC" />
+        <item index="1" class="java.lang.String" itemvalue="Python.A2C" />
+        <item index="2" class="java.lang.String" itemvalue="Python.A3C" />
+        <item index="3" class="java.lang.String" itemvalue="Python.run_CartPole" />
+        <item index="4" class="java.lang.String" itemvalue="Python.simple-PPO" />
       </list>
     </recent_temporary>
   </component>
@@ -401,7 +450,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32164448" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31197098" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -446,46 +495,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/vecAttGruCell.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="39" lean-forward="false" selection-start-line="65" selection-start-column="8" selection-end-line="66" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlp/LSTM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="39" lean-forward="false" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-Meta-Graph-Model.py" />
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-Meta-Graph-Demo/data/yelp-50k/exp_split/1/aids.txt" />
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-Meta-Graph-Demo/data/yelp-50k/exp_split/1/mf_features/path_count/UNBUB_top500_item.dat" />
-    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="625" column="4" lean-forward="false" selection-start-line="625" selection-start-column="4" selection-end-line="625" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DKN-Demo/kg/kg.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DKN-Demo/kg/triple2id.txt" />
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DKN-Demo/kg/relation2id.txt" />
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DKN-Demo/kg/entity2index.txt" />
     <entry file="file://$PROJECT_DIR$/recommendation/Basic-DKN-Demo/kg/entity2id.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-11148">
@@ -775,17 +789,103 @@
         <state relative-caret-position="251">
           <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RL/Basic-PPO-Demo/simple-PPO.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="72" column="90" lean-forward="false" selection-start-line="72" selection-start-column="90" selection-end-line="72" selection-end-column="90" />
+        <state relative-caret-position="-144">
+          <caret line="49" column="59" lean-forward="false" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#23#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-A2C-Demo/run_CartPole.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-A2C-Demo/Actor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-284">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-A2C-Demo/Critic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-AC-Demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="1095" column="0" lean-forward="false" selection-start-line="1095" selection-start-column="0" selection-end-line="1095" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-Policy-Network/RL_brain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-Policy-Network/run_CartPole.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-A2C-Demo/A2C.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="67" column="50" lean-forward="false" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-AC-Demo/AC.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="763">
+          <caret line="51" column="72" lean-forward="true" selection-start-line="51" selection-start-column="72" selection-end-line="51" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-A3C-Demo/A3C.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="57" column="44" lean-forward="false" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
