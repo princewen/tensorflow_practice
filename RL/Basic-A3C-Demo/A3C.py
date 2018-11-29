@@ -6,13 +6,14 @@ import gym
 import os
 import shutil
 import matplotlib.pyplot as plt
+import pandas as pd
 
 
 GAME = 'CartPole-v0'
 OUTPUT_GRAPH = True
 LOG_DIR = './log'
 N_WORKERS = multiprocessing.cpu_count()
-MAX_GLOBAL_EP = 1000
+MAX_GLOBAL_EP = 500
 GLOBAL_NET_SCOPE = 'Global_Net'
 UPDATE_GLOBAL_ITER = 10
 GAMMA = 0.9
@@ -183,6 +184,9 @@ if __name__ == "__main__":
         t.start() # 开启线程
         worker_threads.append(t)
     COORD.join(worker_threads) #把开启的线程加入主线程，等待threads结束
+
+    res = np.concatenate([np.arange(len(GLOBAL_RUNNING_R)).reshape(-1,1),np.array(GLOBAL_RUNNING_R).reshape(-1,1)],axis=1)
+    pd.DataFrame(res, columns=['episode', 'a3c_reward']).to_csv('../a3c_reward.csv')
 
     plt.plot(np.arange(len(GLOBAL_RUNNING_R)), GLOBAL_RUNNING_R)
     plt.xlabel('step')

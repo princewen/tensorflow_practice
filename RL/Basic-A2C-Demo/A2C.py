@@ -1,11 +1,12 @@
 import numpy as np
 import tensorflow as tf
 import gym
+import pandas as pd
 
 OUTPUT_GRAPH = False
-MAX_EPISODE = 3000
+MAX_EPISODE = 500
 DISPLAY_REWARD_THRESHOLD = 200  # renders environment if total episode reward is greater then this threshold
-MAX_EP_STEPS = 1000   # maximum time step in one episode
+MAX_EP_STEPS = 2000   # maximum time step in one episode
 RENDER = False  # rendering wastes time
 GAMMA = 0.9     # reward discount in TD error
 LR_A = 0.001    # learning rate for actor
@@ -100,7 +101,7 @@ class Critic(object):
         td_error, _ = self.sess.run([self.td_error, self.train_op],
                                           {self.s: s, self.v_: v_, self.r: r})
         return td_error
-    
+
 # action有两个，即向左或向右移动小车
 # state是四维
 
@@ -118,6 +119,7 @@ critic = Critic(sess, n_features=N_F, lr=LR_C)
 
 sess.run(tf.global_variables_initializer())
 
+res = []
 for i_episode in range(MAX_EPISODE):
     s = env.reset()
     t = 0
@@ -148,5 +150,8 @@ for i_episode in range(MAX_EPISODE):
                 running_reward = running_reward * 0.95 + ep_rs_sum * 0.05
             if running_reward > DISPLAY_REWARD_THRESHOLD: RENDER = True  # rendering
             print("episode:", i_episode, "  reward:", int(running_reward))
+            res.append([i_episode, running_reward])
             break
+
+pd.DataFrame(res,columns=['episode','a2c_reward']).to_csv('../a2c_reward.csv')
 
