@@ -81,7 +81,8 @@ def get_batch_data():
 
     num_batch = len(X) // hp.batch_size
 
-    print(X[:10],Y[:10])
+    print(X[:10])
+    print(Y[:10])
     X = tf.convert_to_tensor(X,tf.int32)
     Y = tf.convert_to_tensor(Y,tf.int32)
 
