@@ -314,3 +314,78 @@ def label_smoothing(inputs, epsilon=0.1):
     '''
     K = inputs.get_shape().as_list()[-1]  # number of channels
     return ((1 - epsilon) * inputs) + (epsilon / K)
+
+
+def scaled_dotproduct_attention(queries,keys,num_units=None,
+                        num_heads = 0,
+                        dropout_rate = 0,
+                        is_training = True,
+                        causality = False,
+                        scope = "mulithead_attention",
+                        reuse = None):
+    '''Applies multihead attention.
+
+    Args:
+      queries: A 3d tensor with shape of [N, T_q, C_q].
+      keys: A 3d tensor with shape of [N, T_k, C_k].
+      num_units: A scalar. Attention size.
+      dropout_rate: A floating point number.
+      is_training: Boolean. Controller of mechanism for dropout.
+      causality: Boolean. If true, units that reference the future are masked.
+      num_heads: An int. Number of heads.
+      scope: Optional scope for `variable_scope`.
+      reuse: Boolean, whether to reuse the weights of a previous layer
+        by the same name.
+
+    Returns
+      A 3d tensor with shape of (N, T_q, C)
+    '''
+    with tf.variable_scope(scope,reuse=reuse):
+        if num_units is None:
+            num_units = queries.get_shape().as_list[-1]
+
+        # Linear projection
+        Q = tf.layers.dense(queries,num_units,activation=tf.nn.relu) #
+        K = tf.layers.dense(keys,num_units,activation=tf.nn.relu) #
+        V = tf.layers.dense(keys,num_units,activation=tf.nn.relu) #
+
+        outputs = tf.matmul(Q,tf.transpose(K,[0,2,1]))
+        outputs = outputs / (K.get_shape().as_list()[-1] ** 0.5)
+
+        # 这里是对填充的部分进行一个mask，这些位置的attention score变为极小，我们的embedding操作中是有一个padding操作的，
+        # 填充的部分其embedding都是0，加起来也是0，我们就会填充一个很小的数。
+        key_masks = tf.sign(tf.abs(tf.reduce_sum(keys,axis=-1)))
+        key_masks = tf.tile(tf.expand_dims(key_masks,1),[1,tf.shape(queries)[1],1])
+
+        paddings = tf.ones_like(outputs) * (-2 ** 32 + 1)
+        outputs = tf.where(tf.equal(key_masks,0),paddings,outputs)
+
+        # 这里其实就是进行一个mask操作，不给模型看到未来的信息。
+        if causality:
+            diag_vals = tf.ones_like(outputs[0,:,:])
+            tril = tf.contrib.linalg.LinearOperatorTriL(diag_vals).to_dense()
+            masks = tf.tile(tf.expand_dims(tril,0),[tf.shape(outputs)[0],1,1])
+
+            paddings = tf.ones_like(masks) * (-2 ** 32 + 1)
+            outputs = tf.where(tf.equal(masks,0),paddings,outputs)
+
+        outputs = tf.nn.softmax(outputs)
+
+        # Query Mask
+        query_masks = tf.sign(tf.abs(tf.reduce_sum(queries,axis=-1)))
+        query_masks = tf.tile(tf.expand_dims(query_masks,-1),[1,1,tf.shape(keys)[1]])
+        outputs *= query_masks
+
+        # Dropout
+        outputs = tf.layers.dropout(outputs,rate = dropout_rate,training = tf.convert_to_tensor(is_training))
+
+        # Weighted sum
+        outputs = tf.matmul(outputs,V)
+
+        # Residual connection
+        outputs += queries
+
+        # Normalize
+        outputs = normalize(outputs)
+
+    return outputs
