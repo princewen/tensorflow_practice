@@ -29,7 +29,6 @@ print(user_count, item_count, cate_count)
 
 # catelist是item到cate的转换关系
 print(len(cate_list))
-
 print(test_set[:5])
 
 best_auc = 0.0

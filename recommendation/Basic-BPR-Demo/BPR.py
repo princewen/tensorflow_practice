@@ -4,7 +4,6 @@ import os
 import random
 from collections import defaultdict
 
-
 def load_data():
     user_ratings = defaultdict(set)
     max_u_id = -1

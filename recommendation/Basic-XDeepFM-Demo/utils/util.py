@@ -2,7 +2,7 @@
 import tensorflow as tf
 import os, sys
 import time, yaml
-from packaging import version
+#from packaging import version
 
 RES_DIR = './res/'
 CACHE_DIR = './cache/'
@@ -39,10 +39,10 @@ def check_and_mkdir():
 
 
 def check_tensorflow_version():
-    if version.parse(tf.__version__) < version.parse("1.2.0"):
-        raise EnvironmentError("Tensorflow version must >= 1.2.0,but version is {0}". \
-                               format(tf.__version__))
-
+    return
+#    if version.parse(tf.__version__) < version.parse("1.2.0"):
+#        raise EnvironmentError("Tensorflow version must >= 1.2.0,but version is {0}". \
+#                               format(tf.__version__))
 
 def print_time(s, start_time):
     """Take a start time, print elapsed duration, and return a new time."""
