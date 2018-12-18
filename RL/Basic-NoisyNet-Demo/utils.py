@@ -22,13 +22,13 @@ def noisy_dense(inputs, units, bias_shape, c_names, w_i, b_i=None, activation=tf
         inputs = tf.contrib.layers.flatten(inputs)
     flatten_shape = inputs.shape[1]
     weights = tf.get_variable('weights', shape=[flatten_shape, units], initializer=w_i)
-    w_noise = tf.get_variable('w_noise', [flatten_shape, units], initializer=w_i, collections=c_names)
+    w_sigma = tf.get_variable('w_sigma', [flatten_shape, units], initializer=w_i, collections=c_names)
     if noisy_distribution == 'independent':
-        weights += tf.multiply(tf.random_normal(shape=w_noise.shape), w_noise)
+        weights += tf.multiply(tf.random_normal(shape=w_sigma.shape), w_sigma)
     elif noisy_distribution == 'factorised':
         noise_1 = f(tf.random_normal(tf.TensorShape([flatten_shape, 1]), dtype=tf.float32))  # 注意是列向量形式，方便矩阵乘法
         noise_2 = f(tf.random_normal(tf.TensorShape([1, units]), dtype=tf.float32))
-        weights += tf.multiply(noise_1 * noise_2, w_noise)
+        weights += tf.multiply(noise_1 * noise_2, w_sigma)
     dense = tf.matmul(inputs, weights)
     if bias_shape is not None:
         assert bias_shape[0] == units
