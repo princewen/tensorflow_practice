@@ -60,7 +60,7 @@ class Categorical_DQN():
             concatenated = tf.concat([dense2, tf.cast(action, tf.float32)], 1)
         with tf.variable_scope('dense3'):
             dense3 = dense(concatenated, self.atoms, [self.atoms], w_i, b_i) # 返回
-        return dense3
+        return tf.nn.softmax(dense3)
 
     def build_cate_dqn_net(self):
         with tf.variable_scope('target_net'):
