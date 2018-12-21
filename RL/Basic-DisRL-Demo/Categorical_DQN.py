@@ -15,10 +15,11 @@ class Categorical_DQN():
         self.v_min = self.config.v_min
         self.atoms = self.config.atoms
 
-        self.time_step = 0
         self.epsilon = self.config.INITIAL_EPSILON
         self.state_shape = env.observation_space.shape
         self.action_dim = env.action_space.n
+
+        self.time_step = 0
 
         target_state_shape = [1]
         target_state_shape.extend(self.state_shape)
@@ -82,10 +83,16 @@ class Categorical_DQN():
 
         self.optimizer = tf.train.AdamOptimizer(self.config.LEARNING_RATE).minimize(self.cross_entropy_loss)
 
+        eval_params = tf.get_collection("eval_net_params")
+        target_params = tf.get_collection('target_net_params')
+
+        self.update_target_net = [tf.assign(t, e) for t, e in zip(target_params, eval_params)]
+
 
 
 
     def train(self,s,r,action,s_,gamma):
+        self.time_step += 1
         list_q_ = [self.sess.run(self.q_target,feed_dict={self.state_input:[s_],self.action_input:[[a]]}) for a in range(self.action_dim)]
         a_ = tf.argmax(list_q_).eval()
         m = np.zeros(self.atoms)
@@ -103,6 +110,8 @@ class Categorical_DQN():
         self.sess.run(self.optimizer,feed_dict={self.state_input:[s] , self.action_input:[action], self.m_input: m })
 
 
+        if self.time_step % self.config.UPDATE_TARGET_NET == 0:
+            self.sess.run(self.update_target_net)
 
     def save_model(self):
         print("Model saved in : ", self.saver.save(self.sess, self.config.MODEL_PATH))

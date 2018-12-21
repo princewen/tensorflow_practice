@@ -20,3 +20,5 @@ class Categorical_DQN_Config():
     replay_buffer_size = 2000
     iteration = 5
     episode = 300  # 300 games per iteration
+
+
