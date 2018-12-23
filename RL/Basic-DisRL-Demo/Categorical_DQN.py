@@ -13,7 +13,7 @@ class Categorical_DQN():
         self.config = config
         self.v_max = self.config.v_max
         self.v_min = self.config.v_min
-        self.atoms = self.config.atoms
+        self.atoms = self.config.atoms # 价值采样点的个数
 
         self.epsilon = self.config.INITIAL_EPSILON
         self.state_shape = env.observation_space.shape
@@ -23,10 +23,8 @@ class Categorical_DQN():
 
         target_state_shape = [1]
         target_state_shape.extend(self.state_shape)
-
         self.state_input = tf.placeholder(tf.float32,target_state_shape)
         self.action_input = tf.placeholder(tf.int32,[1,1])
-
         self.m_input = tf.placeholder(tf.float32,[self.atoms])
 
         self.delta_z = (self.v_max - self.v_min) / (self.atoms - 1)
@@ -80,7 +78,6 @@ class Categorical_DQN():
         self.q_target = tf.reduce_sum(self.z_target * self.z)
 
         self.cross_entropy_loss = -tf.reduce_sum(self.m_input * tf.log(self.z_eval))
-
         self.optimizer = tf.train.AdamOptimizer(self.config.LEARNING_RATE).minimize(self.cross_entropy_loss)
 
         eval_params = tf.get_collection("eval_net_params")
@@ -97,6 +94,7 @@ class Categorical_DQN():
         a_ = tf.argmax(list_q_).eval()
         m = np.zeros(self.atoms)
         p = self.sess.run(self.z_target,feed_dict = {self.state_input:[s_],self.action_input:[[a_]]})[0]
+        m = np.zeros(self.atoms)
         for j in range(self.atoms):
             Tz = min(self.v_max,max(self.v_min,r+gamma * self.z[j]))
             bj = (Tz - self.v_min) / self.delta_z # 分在第几个块里
