@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69f12537-6c3d-43b1-a62a-ad07d70a14cd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RL/Basic-DisRL-Demo/Categorical_DQN.py" afterPath="$PROJECT_DIR$/RL/Basic-DisRL-Demo/Categorical_DQN.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,6 +15,7 @@
     <SUITE FILE_PATH="coverage/tensorflow1_2$lr.coverage" NAME="lr Coverage Results" MODIFIED="1529722387251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-MLR-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$preprocess.coverage" NAME="preprocess Coverage Results" MODIFIED="1541940517652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-RippleNet-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$Categorical_DQN.coverage" NAME="Categorical_DQN Coverage Results" MODIFIED="1545365293074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RL/Basic-DisRL-Demo" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$run_gail.coverage" NAME="run_gail Coverage Results" MODIFIED="1546175598437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RL/Basic-GAIL-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$simple_PPO.coverage" NAME="simple-PPO Coverage Results" MODIFIED="1543323533617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RL/Basic-PPO-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$AC.coverage" NAME="AC Coverage Results" MODIFIED="1543483823897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RL/Basic-AC-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$eval.coverage" NAME="eval Coverage Results" MODIFIED="1544443557846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/basic/Basic-Transformer-Demo" />
@@ -37,6 +38,7 @@
     <SUITE FILE_PATH="coverage/tensorflow1_2$data.coverage" NAME="data Coverage Results" MODIFIED="1529689500332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-MLR-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$netease.coverage" NAME="netease Coverage Results" MODIFIED="1534173544289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$resnet_mnist.coverage" NAME="resnet_mnist Coverage Results" MODIFIED="1540611064870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CV/ResNet" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$run_ppo.coverage" NAME="run_ppo Coverage Results" MODIFIED="1546172513596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RL/Basic-GAIL-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$gen_model.coverage" NAME="gen_model Coverage Results" MODIFIED="1532186281780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-IRGAN-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$zhihu.coverage" NAME="zhihu Coverage Results" MODIFIED="1535904633696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$mlr.coverage" NAME="mlr Coverage Results" MODIFIED="1529722291768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-MLR-Demo" />
@@ -54,11 +56,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RL/Basic-Rainbow-Net/main.py">
+      <file leaf-file-name="policy_net.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RL/Basic-GAIL-Demo/network_models/policy_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-668">
-              <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+            <state relative-caret-position="358">
+              <caret line="44" column="75" lean-forward="false" selection-start-line="44" selection-start-column="75" selection-end-line="44" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run_ppo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RL/Basic-GAIL-Demo/run_ppo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="95" column="45" lean-forward="false" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -66,81 +78,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="agent.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/RL/Basic-Rainbow-Net/agent.py">
+      <file leaf-file-name="run_gail.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RL/Basic-GAIL-Demo/run_gail.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4155">
-              <caret line="277" column="25" lean-forward="true" selection-start-line="277" selection-start-column="25" selection-end-line="277" selection-end-column="25" />
+            <state relative-caret-position="224">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
-                <element signature="e#23#41#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="huberLoss.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RL/Basic-Rainbow-Net/huberLoss.py">
+      <file leaf-file-name="test_policy.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RL/Basic-GAIL-Demo/test_policy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-287">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="433">
+              <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="discriminator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RL/Basic-GAIL-Demo/network_models/discriminator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="945">
+              <caret line="63" column="43" lean-forward="false" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RL/Basic-Rainbow-Net/model.py">
+      <file leaf-file-name="ppo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RL/Basic-GAIL-Demo/algo/ppo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="153" column="13" lean-forward="true" selection-start-line="153" selection-start-column="13" selection-end-line="153" selection-end-column="37" />
+            <state relative-caret-position="373">
+              <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="replayMemory.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RL/Basic-Rainbow-Net/replayMemory.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="586">
-              <caret line="66" column="39" lean-forward="false" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sumTree.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RL/Basic-Rainbow-Net/sumTree.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="51" column="18" lean-forward="true" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="batchEnv.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RL/Basic-Rainbow-Net/batchEnv.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="156" column="30" lean-forward="false" selection-start-line="156" selection-start-column="30" selection-end-line="156" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="preprocessor.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RL/Basic-Rainbow-Net/preprocessor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="26" />
-              <folding>
-                <element signature="e#45#63#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -179,14 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/recommendation/Basic-RippleNet-Demo/data/ratings_final.txt" />
-        <option value="$PROJECT_DIR$/recommendation/Basic-RippleNet-Demo/main.py" />
-        <option value="$PROJECT_DIR$/recommendation/Basic-RippleNet-Demo/train.py" />
-        <option value="$PROJECT_DIR$/recommendation/Basic-RippleNet-Demo/data_loader.py" />
-        <option value="$PROJECT_DIR$/recommendation/Basic-RippleNet-Demo/model.py" />
-        <option value="$PROJECT_DIR$/recommendation/Basic-MKR-Demo/preprocess.py" />
-        <option value="$PROJECT_DIR$/recommendation/Basic-MKR-Demo/main.py" />
-        <option value="$PROJECT_DIR$/recommendation/Basic-MKR-Demo/train.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-MKR-Demo/data_loader.py" />
         <option value="$PROJECT_DIR$/nlp/RNN_dynamic_cell.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-MKR-Demo/layers.py" />
@@ -230,6 +200,14 @@
         <option value="$PROJECT_DIR$/RL/Basic-Rainbow-Net/huberLoss.py" />
         <option value="$PROJECT_DIR$/RL/Basic-Rainbow-Net/agent.py" />
         <option value="$PROJECT_DIR$/RL/Basic-Rainbow-Net/main.py" />
+        <option value="$PROJECT_DIR$/RL/Basic-GAIL-Demo/newwork_models.py" />
+        <option value="$PROJECT_DIR$/RL/Basic-GAIL-Demo/run_ppo.py" />
+        <option value="$PROJECT_DIR$/RL/Basic-GAIL-Demo/algo/ppo.py" />
+        <option value="$PROJECT_DIR$/RL/Basic-GAIL-Demo/network_models/policy_net.py" />
+        <option value="$PROJECT_DIR$/RL/Basic-GAIL-Demo/sample_trajectory.py" />
+        <option value="$PROJECT_DIR$/RL/Basic-GAIL-Demo/network_models/discriminator.py" />
+        <option value="$PROJECT_DIR$/RL/Basic-GAIL-Demo/run_gail.py" />
+        <option value="$PROJECT_DIR$/RL/Basic-GAIL-Demo/test_policy.py" />
       </list>
     </option>
   </component>
@@ -258,7 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -276,24 +253,13 @@
               <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
               <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
               <item name="RL" type="462c0819:PsiDirectoryNode" />
-              <item name="Basic-Rainbow-Net" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
-              <item name="RL" type="462c0819:PsiDirectoryNode" />
-              <item name="Double-DQN-demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
-              <item name="RL" type="462c0819:PsiDirectoryNode" />
-              <item name="Dueling DQN Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="Basic-GAIL-Demo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -301,21 +267,22 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/vecAttGruCell.py" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/meituan_sxw/PycharmProjects/tensorflow1.2/RL/Basic-GAIL-Demo/algo/ppo.py" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/basic/Basic-Transformer-Demo/data/de-en" />
-      <recent name="$PROJECT_DIR$/recommendation/Basic-MKR-Demo/data" />
-      <recent name="$PROJECT_DIR$/recommendation/Basic-RippleNet-Demo/data" />
-      <recent name="$PROJECT_DIR$/recommendation/Basic-DKN-Demo" />
-      <recent name="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/kg" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/basic/Basic-Transformer-Demo/data" />
       <recent name="$PROJECT_DIR$/recommendation/Basic-DIEN-Demo/data" />
       <recent name="$PROJECT_DIR$/CV" />
       <recent name="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo/test_some_code" />
       <recent name="$PROJECT_DIR$/recommendation/Basic-XDeepFM-Demo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/RL/Basic-GAIL-Demo" />
+      <recent name="$PROJECT_DIR$/basic/Basic-Transformer-Demo/data/de-en" />
+      <recent name="$PROJECT_DIR$/recommendation/Basic-MKR-Demo/data" />
+      <recent name="$PROJECT_DIR$/recommendation/Basic-RippleNet-Demo/data" />
+      <recent name="$PROJECT_DIR$/recommendation/Basic-DKN-Demo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -330,7 +297,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main (2)">
+  <component name="RunManager" selected="Python.run_gail">
     <configuration name="Categorical_DQN" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -385,56 +352,56 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="run_gail" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RL/Basic-NoisyNet-Demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RL/Basic-GAIL-Demo" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tensorflow1.2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RL/Basic-NoisyNet-Demo/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RL/Basic-GAIL-Demo/run_gail.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="ssfsdfsdf" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="run_ppo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RL/Basic-GAIL-Demo" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tensorflow1.2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ssfsdfsdf.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RL/Basic-GAIL-Demo/run_ppo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.main" />
-      <item index="1" class="java.lang.String" itemvalue="Python.ssfsdfsdf" />
-      <item index="2" class="java.lang.String" itemvalue="Python.main (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Categorical_DQN" />
-      <item index="4" class="java.lang.String" itemvalue="Python.main (2)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.main (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Categorical_DQN" />
+      <item index="2" class="java.lang.String" itemvalue="Python.main (2)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.run_ppo" />
+      <item index="4" class="java.lang.String" itemvalue="Python.run_gail" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.main (2)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.main (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Categorical_DQN" />
-        <item index="3" class="java.lang.String" itemvalue="Python.main" />
-        <item index="4" class="java.lang.String" itemvalue="Python.ssfsdfsdf" />
+        <item index="0" class="java.lang.String" itemvalue="Python.run_gail" />
+        <item index="1" class="java.lang.String" itemvalue="Python.run_ppo" />
+        <item index="2" class="java.lang.String" itemvalue="Python.main (2)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.main (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Categorical_DQN" />
       </list>
     </recent_temporary>
   </component>
@@ -462,17 +429,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18097281" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38331318" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38331318" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21886337" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1695279" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21886337" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39782345" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -482,6 +449,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -517,51 +485,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RL/Basic-Policy-Network/run_CartPole.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RL/Basic-A2C-Demo/A2C.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2280">
-          <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RL/a2c_reward.csv" />
-    <entry file="file://$PROJECT_DIR$/RL/Basic-A3C-Demo/A3C.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2565">
-          <caret line="179" column="23" lean-forward="false" selection-start-line="179" selection-start-column="23" selection-end-line="179" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RL/compareAC.py" />
-    <entry file="file://$PROJECT_DIR$/RL/ac_reward.csv" />
-    <entry file="file://$PROJECT_DIR$/RL/Basic-AC-Demo/AC.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/recommendation-FFM-Demo/FFM_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="115" column="11" lean-forward="false" selection-start-line="115" selection-start-column="11" selection-end-line="115" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/Basic-Transformer-Demo/data/de.vocab.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basic/Basic-Transformer-Demo/data/en.vocab.tsv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -672,7 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -687,7 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,9 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="44" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -706,25 +624,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RL/Basic-DisRL-Demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-DisRL-Demo.py" />
     <entry file="file://$PROJECT_DIR$/RL/Double-DQN-demo/RL_brain.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="689">
           <caret line="70" column="9" lean-forward="false" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -732,7 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-855">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -740,9 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -750,9 +653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -760,9 +660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
           <caret line="78" column="91" lean-forward="false" selection-start-line="75" selection-start-column="8" selection-end-line="78" selection-end-column="91" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -770,7 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -778,7 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -786,9 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-          <folding>
-            <element signature="e#1#32#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -804,9 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
           <caret line="70" column="22" lean-forward="true" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -814,7 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -823,34 +711,34 @@
         <state relative-caret-position="75">
           <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="26" />
           <folding>
-            <element signature="e#45#63#0" expanded="true" />
+            <element signature="e#45#63#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RL/Basic-Rainbow-Net/batchEnv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
+        <state relative-caret-position="2340">
           <caret line="156" column="30" lean-forward="false" selection-start-line="156" selection-start-column="30" selection-end-line="156" selection-end-column="30" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RL/Basic-Rainbow-Net/replayMemory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
+        <state relative-caret-position="990">
           <caret line="66" column="39" lean-forward="false" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RL/Basic-Rainbow-Net/sumTree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
+        <state relative-caret-position="765">
           <caret line="51" column="18" lean-forward="true" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
           <folding />
         </state>
@@ -858,38 +746,120 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RL/Basic-Rainbow-Net/huberLoss.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-287">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="390">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RL/Basic-Rainbow-Net/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="153" column="13" lean-forward="true" selection-start-line="153" selection-start-column="13" selection-end-line="153" selection-end-column="37" />
+        <state relative-caret-position="2295">
+          <caret line="153" column="13" lean-forward="false" selection-start-line="153" selection-start-column="13" selection-end-line="153" selection-end-column="37" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#23#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RL/Basic-Rainbow-Net/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-668">
-          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        <state relative-caret-position="375">
+          <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RL/Basic-Rainbow-Net/agent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4155">
-          <caret line="277" column="25" lean-forward="true" selection-start-line="277" selection-start-column="25" selection-end-line="277" selection-end-column="25" />
+        <state relative-caret-position="569">
+          <caret line="277" column="25" lean-forward="false" selection-start-line="277" selection-start-column="25" selection-end-line="277" selection-end-column="25" />
           <folding>
             <element signature="e#23#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-GAIL-Demo/newwork_models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-GAIL-Demo/network_models/policy_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="44" column="75" lean-forward="false" selection-start-line="44" selection-start-column="75" selection-end-line="44" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-GAIL-Demo/algo/ppo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-GAIL-Demo/sample_trajectory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-GAIL-Demo/trajectory/actions.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-GAIL-Demo/run_ppo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="95" column="45" lean-forward="false" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-GAIL-Demo/network_models/discriminator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="63" column="43" lean-forward="false" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-GAIL-Demo/run_gail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL/Basic-GAIL-Demo/test_policy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
