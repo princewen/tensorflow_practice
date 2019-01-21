@@ -60,3 +60,7 @@ model/
 
 *.pkl
 
+.vscode/
+.ipynb_checkpoints/
+*.sqlite
+jupyterhub_cookie_secret
