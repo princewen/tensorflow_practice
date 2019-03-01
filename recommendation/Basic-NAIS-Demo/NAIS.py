@@ -52,8 +52,9 @@ def parse_args():
                         help='0 for NAIS_prod, 1 for NAIS_concat')
     return parser.parse_args()
 
-class NAIS(object):
-    def __init__(self,num_items,args):
+
+class NAIS:
+    def __init__(self, num_items, args):
         self.pretrain = args.pretrain
         self.num_items = num_items
         self.dataset_name = args.dataset
@@ -73,7 +74,6 @@ class NAIS(object):
         self.eta_bilinear = regs[2]
         self.train_loss = args.train_loss
 
-
     def _create_placeholders(self):
         with tf.name_scope("input_data"):
             self.user_input = tf.placeholder(tf.int32, shape=[None, None])  # the index of users
@@ -82,7 +82,7 @@ class NAIS(object):
             self.labels = tf.placeholder(tf.float32, shape=[None, 1])  # the ground truth
 
     def _create_variables(self):
-        with tf.name_scope("embedding"):
+        with tf.variable_scope("embedding"):  # The embedding initialization is unknown now
             trainable_flag = (self.pretrain != 2)
             self.c1 = tf.Variable(
                 tf.truncated_normal(shape=[self.num_items, self.embedding_size], mean=0.0, stddev=0.01), name='c1',
@@ -94,7 +94,7 @@ class NAIS(object):
                 name='embedding_Q', dtype=tf.float32, trainable=trainable_flag)
             self.bias = tf.Variable(tf.zeros(self.num_items), name='bias', trainable=trainable_flag)
 
-            # Variables for attention,两种计算attention的方式
+            # Variables for attention
             if self.algorithm == 0:
                 self.W = tf.Variable(tf.truncated_normal(shape=[self.embedding_size, self.weight_size], mean=0.0,
                                                          stddev=tf.sqrt(
@@ -110,13 +110,12 @@ class NAIS(object):
                                  trainable=True)
             self.h = tf.Variable(tf.ones([self.weight_size, 1]), name='H_for_MLP', dtype=tf.float32)
 
-    def _attention_MLP(self,q_):
+    def _attention_MLP(self, q_):
         with tf.name_scope("attention_MLP"):
             b = tf.shape(q_)[0]
             n = tf.shape(q_)[1]
             r = (self.algorithm + 1) * self.embedding_size
 
-            # 得到attention 的值
             MLP_output = tf.matmul(tf.reshape(q_, [-1, r]), self.W) + self.b  # (b*n, e or 2*e) * (e or 2*e, w) + (1, w)
             if self.activation == 0:
                 MLP_output = tf.nn.relu(MLP_output)
@@ -129,20 +128,20 @@ class NAIS(object):
 
             # softmax for not mask features
             exp_A_ = tf.exp(A_)
-            num_idx = tf.reduce_sum(self.num_idx, 1) # 每个人有多少个评分
-            mask_mat = tf.sequence_mask(num_idx, maxlen=n, dtype=tf.float32)  # (b, n) 加入mask
-            exp_A_ = mask_mat * exp_A_ # 填充的位置变为0
+            num_idx = tf.reduce_sum(self.num_idx, 1)
+            mask_mat = tf.sequence_mask(num_idx, maxlen=n, dtype=tf.float32)  # (b, n)
+            exp_A_ = mask_mat * exp_A_
             exp_sum = tf.reduce_sum(exp_A_, 1, keep_dims=True)  # (b, 1)
-            exp_sum = tf.pow(exp_sum, tf.constant(self.beta, tf.float32, [1])) # 进行压缩
+            exp_sum = tf.pow(exp_sum, tf.constant(self.beta, tf.float32, [1]))
 
             A = tf.expand_dims(tf.div(exp_A_, exp_sum), 2)  # (b, n, 1)
 
-            return tf.reduce_sum(A * self.embedding_q_, 1) # 得到
+            return tf.reduce_sum(A * self.embedding_q_, 1)
 
     def _create_inference(self):
         with tf.name_scope("inference"):
-            self.embedding_q_ = tf.nn.embedding_lookup(self.embedding_Q_, self.user_input)  # (b, n, e) # 历史评分
-            self.embedding_q = tf.nn.embedding_lookup(self.embedding_Q, self.item_input)  # (b, 1, e) # 目标
+            self.embedding_q_ = tf.nn.embedding_lookup(self.embedding_Q_, self.user_input)  # (b, n, e)
+            self.embedding_q = tf.nn.embedding_lookup(self.embedding_Q, self.item_input)  # (b, 1, e)
 
             if self.algorithm == 0:
                 self.embedding_p = self._attention_MLP(self.embedding_q_ * self.embedding_q)
@@ -162,7 +161,7 @@ class NAIS(object):
             self.loss = tf.losses.log_loss(self.labels, self.output) + \
                         self.lambda_bilinear * tf.reduce_sum(tf.square(self.embedding_Q)) + \
                         self.gamma_bilinear * tf.reduce_sum(tf.square(self.embedding_Q_)) + \
-                        self.eta_bilinear * tf.reduce_sum(tf.square(self.W)) # logloss + l2正则
+                        self.eta_bilinear * tf.reduce_sum(tf.square(self.W))
 
     def _create_optimizer(self):
         with tf.name_scope("optimizer"):
@@ -191,6 +190,10 @@ def training(flag, model, dataset, epochs, num_negatives):
                 saver.restore(sess, ckpt.model_checkpoint_path)
                 logging.info("using pretrained variables")
                 print("using pretrained variables")
+            else:
+                sess.run(tf.global_variables_initializer())
+                logging.info("initialized")
+                print("initialized")
         else:
             sess.run(tf.global_variables_initializer())
             logging.info("initialized")
@@ -202,7 +205,7 @@ def training(flag, model, dataset, epochs, num_negatives):
         batch_time = time() - batch_begin
 
         num_batch = len(batches[1])
-        batch_index = range(num_batch)
+        batch_index = list(range(num_batch))
 
         # initialize the evaluation feed_dicts
         testDict = evaluate.init_evaluate_model(model, sess, dataset.testRatings, dataset.testNegatives,

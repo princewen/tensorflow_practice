@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69f12537-6c3d-43b1-a62a-ad07d70a14cd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/FISM.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/Batch_gen.py" afterPath="$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/Batch_gen.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/Evaluate.py" afterPath="$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/Evaluate.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/FISM.py" afterPath="$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/FISM.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/NAIS.py" afterPath="$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/NAIS.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,7 +37,7 @@
     <SUITE FILE_PATH="coverage/tensorflow1_2$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1545377037092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RL/Basic-DisRL-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$preprocess__1_.coverage" NAME="preprocess (1) Coverage Results" MODIFIED="1542602954609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-MKR-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$kg_preprocess.coverage" NAME="kg_preprocess Coverage Results" MODIFIED="1541604856562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/kg" />
-    <SUITE FILE_PATH="coverage/tensorflow1_2$NAIS.coverage" NAME="NAIS Coverage Results" MODIFIED="1551431946415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-NAIS-Demo" />
+    <SUITE FILE_PATH="coverage/tensorflow1_2$NAIS.coverage" NAME="NAIS Coverage Results" MODIFIED="1551434396342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-NAIS-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$plotResult.coverage" NAME="plotResult Coverage Results" MODIFIED="1529723400750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-MLR-Demo" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$news_preprocess.coverage" NAME="news_preprocess Coverage Results" MODIFIED="1541602017949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-DKN-Demo/news" />
     <SUITE FILE_PATH="coverage/tensorflow1_2$data.coverage" NAME="data Coverage Results" MODIFIED="1529689500332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommendation/Basic-MLR-Demo" />
@@ -74,8 +76,8 @@
       <file leaf-file-name="NAIS.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/NAIS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="182" column="43" lean-forward="false" selection-start-line="182" selection-start-column="43" selection-end-line="182" selection-end-column="43" />
+            <state relative-caret-position="169">
+              <caret line="260" column="22" lean-forward="false" selection-start-line="260" selection-start-column="17" selection-end-line="260" selection-end-column="22" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -86,19 +88,17 @@
       <file leaf-file-name="Batch_gen.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/Batch_gen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="109" column="54" lean-forward="false" selection-start-line="109" selection-start-column="54" selection-end-line="109" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="209">
+              <caret line="160" column="18" lean-forward="false" selection-start-line="160" selection-start-column="13" selection-end-line="160" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
+            <state relative-caret-position="634">
               <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
               <folding />
             </state>
@@ -108,21 +108,9 @@
       <file leaf-file-name="Evaluate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/Evaluate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-213">
-              <caret line="68" column="19" lean-forward="false" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
+            <state relative-caret-position="49">
+              <caret line="60" column="72" lean-forward="false" selection-start-line="60" selection-start-column="72" selection-end-line="60" selection-end-column="72" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FISM.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/FISM.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2648">
-              <caret line="180" column="112" lean-forward="false" selection-start-line="180" selection-start-column="112" selection-end-line="180" selection-end-column="112" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -130,11 +118,33 @@
       <file leaf-file-name="Dataset.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/Dataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="15">
               <caret line="13" column="63" lean-forward="false" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FISM.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/FISM.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="158" column="0" lean-forward="true" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ops.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/framework/ops.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="1469" column="0" lean-forward="false" selection-start-line="1469" selection-start-column="0" selection-end-line="1469" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -165,6 +175,8 @@
       <find>self.tfd</find>
       <find>positional_encoding</find>
       <find>self.num_idx</find>
+      <find>already load the evaluate model</find>
+      <find>range</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/recommendation/Basic-NAIS-Demo</dir>
@@ -223,11 +235,11 @@
         <option value="$PROJECT_DIR$/recommendation/Basic-DMF-Model/main.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-DMF-Model/dataset.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/Dataset.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/Batch_gen.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/NAIS.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/Evaluate.py" />
         <option value="$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/FISM.py" />
-        <option value="$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/Batch_gen.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -299,7 +311,15 @@
               <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
               <item name="recommendation" type="462c0819:PsiDirectoryNode" />
               <item name="Basic-NAIS-Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tensorflow1.2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tensorflow1.2" type="462c0819:PsiDirectoryNode" />
+              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
+              <item name="Basic-NAIS-Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="Log" type="462c0819:PsiDirectoryNode" />
+              <item name="pinterest-20" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -480,7 +500,7 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42321643" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29504234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2031439" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -532,13 +552,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RL/Basic-NoisyNet-Demo/readme">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RL/Basic-DisRL-Demo.py" />
     <entry file="file://$PROJECT_DIR$/RL/Double-DQN-demo/RL_brain.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -593,13 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/framework/ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="569" column="0" lean-forward="false" selection-start-line="569" selection-start-column="0" selection-end-line="569" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -853,9 +859,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="634">
+          <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/site-packages/tensorflow/python/framework/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="1469" column="0" lean-forward="false" selection-start-line="1469" selection-start-column="0" selection-end-line="1469" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda/anaconda/lib/python3.6/multiprocessing/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/Dataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
+        <state relative-caret-position="15">
           <caret line="13" column="63" lean-forward="false" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
@@ -863,49 +893,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/Evaluate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-213">
-          <caret line="68" column="19" lean-forward="false" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/FISM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2648">
-          <caret line="180" column="112" lean-forward="false" selection-start-line="180" selection-start-column="112" selection-end-line="180" selection-end-column="112" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/NAIS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="182" column="43" lean-forward="false" selection-start-line="182" selection-start-column="43" selection-end-line="182" selection-end-column="43" />
+        <state relative-caret-position="169">
+          <caret line="260" column="22" lean-forward="false" selection-start-line="260" selection-start-column="17" selection-end-line="260" selection-end-column="22" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/Batch_gen.py">
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/Evaluate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="109" column="54" lean-forward="false" selection-start-line="109" selection-start-column="54" selection-end-line="109" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="49">
+          <caret line="60" column="72" lean-forward="false" selection-start-line="60" selection-start-column="72" selection-end-line="60" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/Batch_gen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+        <state relative-caret-position="209">
+          <caret line="160" column="18" lean-forward="false" selection-start-line="160" selection-start-column="13" selection-end-line="160" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-NAIS-Demo/FISM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="158" column="0" lean-forward="true" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -58,7 +58,7 @@ def eval(model, sess, testRatings, testNegatives, DictList):
     hits, ndcgs, losses = [],[],[]
     if(num_thread > 1): # Multi-thread
         pool = multiprocessing.Pool(num_thread)
-        res = pool.map(_eval_one_rating, range(len(_testRatings)))
+        res = pool.map(_eval_one_rating, list(range(len(_testRatings))))
         pool.close()
         pool.join()
         hits = [r[0] for r in res]

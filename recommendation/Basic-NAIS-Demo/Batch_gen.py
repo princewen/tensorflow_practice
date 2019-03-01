@@ -1,4 +1,3 @@
-import multiprocessing
 import numpy as np
 
 _Dataset = None
@@ -52,23 +51,13 @@ def batch_gen(batches, i):
 
 def _preprocess(get_train_batch):  # generate the masked batch list
     user_input_list, num_idx_list, item_input_list, labels_list = [], [], [], []
-    cpu_count = multiprocessing.cpu_count()
-    if cpu_count == 1:
-        for i in range(_num_batch):
-            ui, ni, ii, l = get_train_batch(i)
-            user_input_list.append(ui)
-            num_idx_list.append(ni)
-            item_input_list.append(ii)
-            labels_list.append(l)
-    else:
-        pool = multiprocessing.Pool(cpu_count)
-        res = pool.map(get_train_batch, list(range(_num_batch)))
-        pool.close()
-        pool.join()
-        user_input_list = [r[0] for r in res]
-        num_idx_list = [r[1] for r in res]
-        item_input_list = [r[2] for r in res]
-        labels_list = [r[3] for r in res]
+
+    for i in range(_num_batch):
+        ui, ni, ii, l = get_train_batch(i)
+        user_input_list.append(ui)
+        num_idx_list.append(ni)
+        item_input_list.append(ii)
+        labels_list.append(l)
     return (user_input_list, num_idx_list, item_input_list, labels_list)
 
 

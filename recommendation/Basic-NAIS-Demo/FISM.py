@@ -79,7 +79,7 @@ class FISM:
             self.labels = tf.placeholder(tf.float32, shape=[None, 1])  # the ground truth
 
     def _create_variables(self):
-        with tf.name_scope("embedding"):  # The embedding initialization is unknown now
+        with tf.variable_scope("embedding"):  # The embedding initialization is unknown now
             self.c1 = tf.Variable(
                 tf.truncated_normal(shape=[self.num_items, self.embedding_size], mean=0.0, stddev=0.01),
                 # why [0, 3707)?
@@ -136,6 +136,10 @@ def training(flag, model, dataset, epochs, num_negatives):
                 saver.restore(sess, ckpt.model_checkpoint_path)
                 logging.info("using pretrained variables")
                 print("using pretrained variables")
+            else:
+                sess.run(tf.global_variables_initializer())
+                logging.info("initialized")
+                print("initialized")
         else:
             sess.run(tf.global_variables_initializer())
             logging.info("initialized")
@@ -147,7 +151,7 @@ def training(flag, model, dataset, epochs, num_negatives):
         batch_time = time() - batch_begin
 
         num_batch = len(batches[1])
-        batch_index = range(num_batch)
+        batch_index = list(range(num_batch))
 
         # initialize the evaluation feed_dicts
         testDict = evaluate.init_evaluate_model(model, sess, dataset.testRatings, dataset.testNegatives,
