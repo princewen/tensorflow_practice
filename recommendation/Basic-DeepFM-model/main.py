@@ -138,7 +138,6 @@ dfm_params = {
     "verbose":True,
     "eval_metric":gini_norm,
     "random_seed":config.RANDOM_SEED
-
 }
 
 # load data
