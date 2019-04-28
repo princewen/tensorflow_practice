@@ -9,8 +9,8 @@ import argparse
 import model
 import evaluation
 
-train_data = ''
-test_data = ''
+train_data = 'data/train.csv'
+test_data = 'data/test.csv'
 
 class Args():
     is_training = False
@@ -21,13 +21,13 @@ class Args():
     dropout_p_hidden = 1
     learning_rate = 0.001
     decay = 0.96
-    decay_steps = 1e4
+    decay_steps = 10
     sigma = 0
     init_as_normal = False
     reset_after_session = True
     session_key = 'SessionId'
     item_key = 'ItemId'
-    time_key = 'Time'
+    time_key = 'Timestamps'
     grad_cap = 0
     test_model = 2
     checkpoint_dir = './checkpoint'
@@ -41,7 +41,7 @@ def parseArgs():
     parser = argparse.ArgumentParser(description='GRU4Rec args')
     parser.add_argument('--layer', default=1, type=int)
     parser.add_argument('--size', default=100, type=int)
-    parser.add_argument('--epoch', default=3, type=int)
+    parser.add_argument('--epoch', default=300, type=int)
     parser.add_argument('--lr', default=0.001, type=float)
     parser.add_argument('--train', default=1, type=int)
     parser.add_argument('--test', default=2, type=int)
