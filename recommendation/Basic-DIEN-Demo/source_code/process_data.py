@@ -1,3 +1,4 @@
+from __future__ import print_function
 import sys
 import random
 import time
@@ -8,7 +9,7 @@ def process_meta(file):
     for line in fi:
         obj = eval(line)
         cat = obj["categories"][0][-1]
-        print>>fo, obj["asin"] + "\t" + cat
+        print(obj["asin"] + "\t" + cat, file=fo)
 
 def process_reviews(file):
     fi = open(file, "r")
@@ -20,7 +21,7 @@ def process_reviews(file):
         itemID = obj["asin"]
         rating = obj["overall"]
         time = obj["unixReviewTime"]
-        print>>fo, userID + "\t" + itemID + "\t" + str(rating) + "\t" + str(time)
+        print(userID + "\t" + itemID + "\t" + str(rating) + "\t" + str(time), file=fo)
 
 def manual_join():
     f_rev = open("reviews-info", "r")
@@ -55,14 +56,14 @@ def manual_join():
                 if asin_neg == asin:
                     continue 
                 items[1] = asin_neg
-                print>>fo, "0" + "\t" + "\t".join(items) + "\t" + meta_map[asin_neg]
+                print("0" + "\t" + "\t".join(items) + "\t" + meta_map[asin_neg], file=fo)
                 j += 1
                 if j == 1:             #negative sampling frequency
                     break
             if asin in meta_map:
-                print>>fo, "1" + "\t" + line + "\t" + meta_map[asin]
+                print("1" + "\t" + line + "\t" + meta_map[asin], file=fo)
             else:
-                print>>fo, "1" + "\t" + line + "\t" + "default_cat"
+                print("1" + "\t" + line + "\t" + "default_cat", file=fo)
 
 
 def split_test():
@@ -83,16 +84,16 @@ def split_test():
         user = line.split("\t")[1]
         if user == last_user:
             if i < user_count[user] - 2:  # 1 + negative samples
-                print>> fo, "20180118" + "\t" + line
+                print("20180118" + "\t" + line, file=fo)
             else:
-                print>>fo, "20190119" + "\t" + line
+                print("20190119" + "\t" + line, file=fo)
         else:
             last_user = user
             i = 0
             if i < user_count[user] - 2:
-                print>> fo, "20180118" + "\t" + line
+                print("20180118" + "\t" + line, file=fo)
             else:
-                print>>fo, "20190119" + "\t" + line
+                print("20190119" + "\t" + line, file=fo)
         i += 1
 
 process_meta(sys.argv[1])

@@ -1,3 +1,4 @@
+from __future__ import print_function
 import sys
 import hashlib
 import random
@@ -37,7 +38,7 @@ for line in fin:
         if len(cat_str) > 0: cat_str = cat_str[:-1]
         if len(mid_str) > 0: mid_str = mid_str[:-1]
         if history_clk_num >= 1:    # 8 is the average length of user behavior
-            print >> fo, items[1] + "\t" + user + "\t" + movie_id + "\t" + cat1 +"\t" + mid_str + "\t" + cat_str
+            print(items[1] + "\t" + user + "\t" + movie_id + "\t" + cat1 +"\t" + mid_str + "\t" + cat_str, file=fo)
     last_user = user
     if clk:
         movie_id_list.append(movie_id)

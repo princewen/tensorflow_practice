@@ -1,3 +1,4 @@
+from __future__ import print_function
 import random
 
 fi = open("local_test", "r")
@@ -11,10 +12,10 @@ while True:
     if noclk_line == "" or clk_line == "":
         break
     if rand_int == 2:
-        print >> ftest, noclk_line
-        print >> ftest, clk_line
+        print(noclk_line, file=ftest)
+        print(clk_line, file=ftest)
     else:
-        print >> ftrain, noclk_line
-        print >> ftrain, clk_line
+        print(noclk_line, file=ftrain)
+        print(clk_line, file=ftrain)
         
 
