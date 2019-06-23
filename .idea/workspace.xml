@@ -1,49 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69f12537-6c3d-43b1-a62a-ad07d70a14cd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/1.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/10.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/11.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/12.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/13.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/14.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/15.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/16.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/17.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/18.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/19.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/2.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/20.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/21.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/22.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/23.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/24.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/25.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/26.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/27.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/28.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/29.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/29.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/3.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/30.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/30.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/31.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/31.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/32.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/33.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/34.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/35.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/36.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/4.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/5.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/6.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/7.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/8.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basic/pic/9.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/basic.py" afterPath="$PROJECT_DIR$/basic/basic.py" />
-    </list>
+    <list default="true" id="69f12537-6c3d-43b1-a62a-ad07d70a14cd" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,12 +107,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeepFM.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DeepFM.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recommendation/Basic-DeepFM-model/DeepFM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1311">
-              <caret line="135" column="89" lean-forward="true" selection-start-line="134" selection-start-column="33" selection-end-line="135" selection-end-column="89" />
+            <state relative-caret-position="566">
+              <caret line="65" column="17" lean-forward="true" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="79" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeepFM-StepByStep.ipynb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/recommendation/Basic-DeepFM-model/DeepFM-StepByStep.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="8" />
             </state>
           </provider>
         </entry>
@@ -184,16 +151,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logistic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda/anaconda/envs/python3_5/lib/python3.5/site-packages/sklearn/linear_model/logistic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16965">
-              <caret line="1155" column="8" lean-forward="false" selection-start-line="1155" selection-start-column="8" selection-end-line="1155" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -549,10 +506,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2560" y="0" width="2560" height="1440" extended-state="0" />
+    <frame x="-1920" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15766482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2113951" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -560,7 +517,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39298669" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21653256" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2939424" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3972202" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -606,13 +563,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/recommendation/Basic-SessionBasedRNN-Demo/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1679">
-          <caret line="231" column="43" lean-forward="false" selection-start-line="231" selection-start-column="43" selection-end-line="231" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/Basic-DSIN-Demo/gen_sessions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1440">
@@ -983,9 +933,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/Basic-DeepFM-model/DeepFM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1311">
-          <caret line="135" column="89" lean-forward="true" selection-start-line="134" selection-start-column="33" selection-end-line="135" selection-end-column="89" />
+        <state relative-caret-position="566">
+          <caret line="65" column="17" lean-forward="true" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="79" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/Basic-DeepFM-model/DeepFM-StepByStep.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
         </state>
       </provider>
     </entry>
