@@ -113,7 +113,7 @@ if __name__ == '__main__':
         )
     )
 
-    loss = tf.log(1 + tf.exp(input_y * y_)) + l2_norm
+    loss = tf.log(1 + tf.exp(-input_y * y_)) + l2_norm
 
     train_step = tf.train.GradientDescentOptimizer(learning_rate=lr).minimize(loss)
 
