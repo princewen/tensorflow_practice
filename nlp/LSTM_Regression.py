@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 
 
 BATCH_START = 0
-TIME_STEPS = 20
-BATCH_SIZE = 50
+TIME_STEPS = 15 # smaller steps will be taken 
+BATCH_SIZE = 60 #better batch size
 INPUT_SIZE = 1
 OUTPUT_SIZE = 1
-CELL_SIZE = 10
+CELL_SIZE = 20 #increased the cell size from 10 to 20 to store more cell size
 LR = 0.006
 
 
@@ -74,7 +74,7 @@ class LSTMRNN(object):
         with tf.name_scope('Wx_plus_b'):
             self.pred = tf.matmul(l_out_x, Ws_out) + bs_out
 
-    def compute_cost(self):
+    def compute_cost(self): #the given fucntion reshapes the given target and computes the cost of the loss function
         losses = tf.contrib.legacy_seq2seq.sequence_loss_by_example(
             [tf.reshape(self.pred, [-1], name='reshape_pred')],
             [tf.reshape(self.ys, [-1], name='reshape_target')],
