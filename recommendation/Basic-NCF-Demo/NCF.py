@@ -166,7 +166,7 @@ class NCF(object):
             # self.loss = tf.reduce_mean(self.loss_func(self.label, self.logits),
             # 								name='loss')
 
-        with tf.name_scope("optimzation"):
+        with tf.name_scope("optimization"):
             self.optimzer = self.optim.minimize(self.loss)
 
 
